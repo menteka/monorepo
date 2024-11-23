@@ -4,7 +4,8 @@
     "build": "turbo build",
     "dev": "turbo dev",
     "lint": "turbo lint",
-    "format": "prettier --write \"**/*.{svelte,ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{svelte,ts,tsx,md}\"",
+    "build-db": "turbo build --filter=d1-manager"
   },
   "devDependencies": {
     "prettier": "^3.2.5",

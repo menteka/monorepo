@@ -7,7 +7,8 @@ node_modules
 .vercel
 .svelte-kit
 dist
-/build
+build
+.turbo
 
 # OS
 .DS_Store
