@@ -1,0 +1,11 @@
+{
+  "skipToMainText": "Skip to main content",
+  "routes": {
+    "home": "home",
+    "saved": "saved",
+    "settings": "settings",
+    "feeds": "feeds",
+    "learn": "learn"
+  }
+}
+

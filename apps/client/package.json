@@ -1,0 +1,44 @@
+{
+  "name": "menteka-client",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build",
+    "preview": "vite preview",
+    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+    "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+    "test": "vitest && npm run test:e2e && npm run test:unit -- --run",
+    "test:e2e": "playwright test",
+    "test:unit": "vitest",
+    "lint": "eslint . && prettier --check .",
+    "format": "prettier --write ."
+  },
+  "dependencies": {
+    "dompurify": "^3.1.7",
+    "idb": "^8.0.0",
+    "@repo/ui": "*"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.48.2",
+    "@sveltejs/adapter-node": "^5.2.9",
+    "@sveltejs/kit": "^2.7.4",
+    "@sveltejs/vite-plugin-svelte": "^4.0.0",
+    "@types/dompurify": "^3.0.5",
+    "@types/eslint": "^9.6.1",
+    "browserify": "^17.0.1",
+    "eslint": "^9.14.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-svelte": "^2.46.0",
+    "globals": "^15.11.0",
+    "prettier": "^3.3.3",
+    "prettier-plugin-svelte": "^3.2.7",
+    "svelte": "^5.1.9",
+    "svelte-check": "^4.0.5",
+    "typescript": "^5.6.3",
+    "typescript-eslint": "^8.12.2",
+    "vite": "^5.4.10",
+    "vitest": "^2.1.4"
+  },
+  "type": "module"
+}
