@@ -8,7 +8,7 @@
 	],
 	"scripts": {
 		"prepare": "tsup src/cfai.ts -d cfai --format esm --minify",
-		"dev": "vite dev",
+		"dev": "vite dev --port 3001",
 		"build": "vite build",
 		"preview": "vite preview",
 		"test": "playwright test",

@@ -1,10 +1,12 @@
 {
-  "name": "@menteka/client",
+  "name": "Menteka",
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "dev": "vite dev",
-    "build": "vite build",
+    "dev": "tauri dev",
+    "build": "tauri build",
+    "vite-dev": "vite dev --port 3000",
+    "vite-build": "vite build",
     "preview": "vite preview",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
@@ -12,18 +14,22 @@
     "test:e2e": "playwright test",
     "test:unit": "vitest",
     "lint": "eslint . && prettier --check .",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "tauri": "tauri"
   },
   "dependencies": {
+    "@repo/ui": "*",
+    "@tauri-apps/plugin-http": "^2.0.1",
     "dompurify": "^3.1.7",
-    "idb": "^8.0.0",
-    "@repo/ui": "*"
+    "idb": "^8.0.0"
   },
   "devDependencies": {
     "@playwright/test": "^1.48.2",
     "@sveltejs/adapter-node": "^5.2.9",
+    "@sveltejs/adapter-static": "^3.0.6",
     "@sveltejs/kit": "^2.7.4",
     "@sveltejs/vite-plugin-svelte": "^4.0.0",
+    "@tauri-apps/cli": "^2.1.0",
     "@types/dompurify": "^3.0.5",
     "@types/eslint": "^9.6.1",
     "browserify": "^17.0.1",
