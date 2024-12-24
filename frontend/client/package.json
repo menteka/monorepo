@@ -18,8 +18,11 @@
     "tauri": "tauri"
   },
   "dependencies": {
-    "@repo/ui": "*",
+    "@menteka/parser": "*",
+    "@menteka/ui": "*",
     "@tauri-apps/plugin-http": "^2.0.1",
+    "@tauri-apps/plugin-notification": "^2.0.0",
+    "@tauri-apps/plugin-sql": "^2.2.0",
     "dompurify": "^3.1.7",
     "idb": "^8.0.0"
   },

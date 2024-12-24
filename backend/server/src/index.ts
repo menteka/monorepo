@@ -4,13 +4,8 @@ import { HTTPException } from "hono/http-exception";
 import { z } from "zod";
 import { zValidator } from "@hono/zod-validator";
 import { cors } from "hono/cors";
-
-// Define types
-type Bindings = {
-  DB: D1Database;
-  JWT_SECRET: string;
-  EMAIL_API_KEY: string; // For your email service (SendGrid, Resend, etc.)
-};
+import db from "./db";
+import { Bindings } from "./types";
 
 type User = {
   id: string;
@@ -34,8 +29,11 @@ type UserData = {
 
 const app = new Hono<{ Bindings: Bindings }>();
 
-// Middleware setup
 app.use("/*", cors());
+
+app.route("/db", db);
+
+// Middleware setup
 app.use("/api/*", async (c, next) => {
   try {
     await next();
@@ -252,3 +250,4 @@ app.get("/api/data/:id", auth, async (c) => {
 });
 
 export default app;
+export type AppType = typeof app;

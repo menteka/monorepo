@@ -1,50 +1,22 @@
 :root {
-    --box-shadow: 5px 5px currentColor;
-    --border: 2px solid currentColor;
-    --radius: 24px;
-    --background: #ffffff;
-    --background-highlight: #fbdd74;
-    --foreground: #000;
-    --foreground-highlight: #532d7f;
+  --box-shadow: 5px 5px currentColor;
+  --border: 2px solid currentColor;
+  --radius: 24px;
+  --background: #ffffff;
+  --background-highlight: #fbdd74;
+  --foreground: #000;
+  --foreground-highlight: #532d7f;
 }
 
 @font-face {
-    font-family: 'JosefinSans';
-    src: url('../fonts/Josefin.ttf');
-}
-
-.button {
-    position: relative;
-    font-weight: 400;
-    padding-inline: 1rem;
-    padding-block: 0.3rem;
-    border-radius: var(--radius);
-    background-color: var(--background-highlight);
-    transition: color 0.1s ease;
-    outline: var(--border);
-    box-shadow: var(--box-shadow);
-    cursor: pointer;
-    font-family: 'JosefinSans';
-}
-
-.button:hover {
-    color: var(--foreground-highlight);
-}
-
-.button:active {
-    top: 5px;
-    left: 5px;
-    box-shadow: none;
-}
-
-.button:active:before {
-    opacity: 0;
+  font-family: "JosefinSans";
+  src: url("../fonts/Josefin.ttf");
 }
 
 .title {
 }
 
 body {
-    font-family: JosefinSans;
-    color: var(--foreground);
+  font-family: JosefinSans;
+  color: var(--foreground);
 }
