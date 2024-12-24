@@ -1,0 +1,33 @@
+{
+  "name": "Substack",
+  "description": "Substack is een platform voor nieuwsbrieven. Ze documenteren volledige feed-ondersteuning voor hun publicaties op [Publications 101 (Engelstalig)](https://support.substack.com/hc/en-us/articles/360038239391-Is-there-an-RSS-feed-for-my-publication).",
+  "feedSupport": "full",
+  "feedFormulas": [
+    {
+      "formula": "https://:publicationName.substack.com/feed",
+      "type": "newsletter",
+      "isBridged": false,
+      "name": "Publicatie-updates",
+      "description": "Deze feed bevat de 20 meest recente nieuwsbrieven van een Substack-publicatie."
+    },
+    {
+      "formula": ":customDomain/feed",
+      "type": "newsletter",
+      "isBridged": false,
+      "name": "Publicatie-updates (eigen domein)",
+      "description": "Deze feed bevat de 20 meest recente nieuwsbrieven van een Substack-publicatie die wordt gehost op een eigen domein."
+    }
+  ],
+  "params": {
+    "publicationName": {
+      "name": "Publicatienaam",
+      "description": "De naam van de Substack-publicatie. Het is het deel van de URL na https:// en voor .substack.com.",
+      "placeholder": "allegeschiedenisooit"
+    },
+    "customDomain": {
+      "name": "Eigen domein",
+      "description": "Het eigen domein van de Substack-publicatie.",
+      "placeholder": "https://www.klopping.nl"
+    }
+  }
+}

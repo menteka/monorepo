@@ -1,0 +1,20 @@
+{
+  "name": "Archive of Our Own - AO3 (Ons Eigen Archief)",
+  "description": "Archive of Our Own is een online platform voor creatief schrijven, voornamelijk gericht op **fanfictie**. Ze hebben enige ondersteuning voor RSS-feeds gedocumenteerd in hun [FAQ](https://archiveofourown.org/faq/subscriptions-and-feeds?language_id=nl#subscribefeed).",
+  "feedSupport": "full",
+  "feedFormulas": [
+    {
+      "formula": "https://archiveofourown.org/tags/:tagId/feed.atom",
+      "isBridged": false,
+      "name": "Tag updates",
+      "description": "Deze feed bevat de 25 meest recente werken voor een specifieke tag."
+    }
+  ],
+  "params": {
+    "tagId": {
+      "name": "Tag ID",
+      "description": "De ID van de tag.",
+      "placeholder": "13052407"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "YouTube",
+  "description": "YouTube is een gratis videoplatform van Google.",
+  "feedSupport": "hidden",
+  "feedFormulas": [
+    {
+      "formula": "https://www.youtube.com/feeds/videos.xml?channel_id=:channelId",
+      "type": "video",
+      "isBridged": false,
+      "name": "Kanaalfeed",
+      "description": "Deze feed bevat de 15 meest recent geüploade video's van een kanaal."
+    }
+  ],
+  "params": {
+    "channelId": {
+      "name": "Kanaal-ID",
+      "description": "Het ID van het YouTube-kanaal. Dit is anders dan de kanaalnaam of de url van een kanaal. Om het kanaal-ID op te achterhalen kan je naar de kanaalpagina gaan, op **en nog x links** drukken om de kanaaldetails te bekijken. Daarin ga je naar **Kanaal delen** en er zal een optie **Kanaal-ID kopiëren** zijn. Als je zelf een kanaal hebt, kun je het kanaal-ID ook vinden in de geavanceerde instellingen van je kanaal.",
+      "placeholder": "UCf63l7Wp_wX7T-5ChM_Km9Q"
+    }
+  }
+}

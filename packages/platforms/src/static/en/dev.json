@@ -1,0 +1,20 @@
+{
+  "name": "DEV Community",
+  "description": "DEV Community is a community of developers sharing their work and knowledge through articles, podcasts and videos.",
+  "feedSupport": "hidden",
+  "feedFormulas": [
+    {
+      "formula": "https://dev.to/feed/:username",
+      "isBridged": false,
+      "name": "User activity",
+      "description": "This feed contains the most recent activity of a specific user or organisation."
+    }
+  ],
+  "params": {
+    "username": {
+      "name": "Username",
+      "description": "The username of the user or organisation. You will also find it in the URL of the user's profile.",
+      "placeholder": "devteam"
+    }
+  }
+}

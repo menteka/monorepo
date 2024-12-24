@@ -54,3 +54,5 @@ export type FeedType =
   | "forum"
   | "image"
   | "other";
+
+export * from "./platforms";

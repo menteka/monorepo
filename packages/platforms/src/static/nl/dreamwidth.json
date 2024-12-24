@@ -1,0 +1,29 @@
+{
+  "name": "Dreamwidth",
+  "description": "Dreamwidth is een platform gericht op schrijven van \"journals\", dat zijn digitale tijdschriften en/of dagboeken. Het is gebaseerd op LiveJournal, maar benadrukt open toegang, transparantie, vrijheid en respect. De meeste pagina's op Dreamwidth hebben een RSS- en Atom-feed. Er staat meestal een link naar de feed aan de zijkant van de pagina.",
+  "feedSupport": "full",
+  "feedFormulas": [
+    {
+      "formula": "https://:journal.dreamwidth.org/data/:format",
+      "isBridged": false,
+      "name": "Blad updates",
+      "description": "Deze feed bevat de 20 meest recente berichten van een blad."
+    }
+  ],
+  "params": {
+    "journal": {
+      "name": "Journal",
+      "description": "De naam van het Dreamwidth-journal. Dit is de naam waaronder de berichten op je Dreamwidth-startpagina verschijnen, en het is ook het deel van de url voor dreamwidth.org wanneer je het journal bezoekt.",
+      "placeholder": "100words"
+    },
+    "format": {
+      "name": "Formaat",
+      "description": "Het formaat van de feed.",
+      "placeholder": "RSS",
+      "options": {
+        "atom": "Atom",
+        "rss": "RSS"
+      }
+    }
+  }
+}

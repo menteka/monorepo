@@ -1,0 +1,25 @@
+{
+  "name": "Mastodon",
+  "description": "Mastodon is a decentralized social network where users can post, follow, and interact with others. Instead of one central server, Mastodon consists of different servers, each with their own character. To discover servers, you can for example look at [joinmastodon.org](https://joinmastodon.org/servers).",
+  "feedSupport": "hidden",
+  "feedFormulas": [
+    {
+      "formula": ":instanceUrl/@:username.rss",
+      "isBridged": false,
+      "name": "User posts",
+      "description": "This feed contains the 20 most recent posts of a user."
+    }
+  ],
+  "params": {
+    "instanceUrl": {
+      "name": "Instance URL",
+      "description": "The URL of the Mastodon server or instance. As Mastodon is a decentralized platform, there is not one central server that contains all users. You can find the URL of the server on the user's profile page, under the display name it will say @username@instanceurl.",
+      "placeholder": "universeodon.com"
+    },
+    "username": {
+      "name": "Username",
+      "description": "The username of the Mastodon user.",
+      "placeholder": "georgetakei"
+    }
+  }
+}

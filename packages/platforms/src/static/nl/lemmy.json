@@ -1,0 +1,57 @@
+{
+  "name": "Lemmy",
+  "description": "Lemmy is een linkverzamelplatform en discussieforum, vergelijkbaar met Reddit. Ze bieden volledige RSS-feedondersteuning voor hun feeds. Wanneer je op een pagina bent, vind je de link naar de RSS-feed door te klikken op het RSS-pictogram naast de sorteeropties.",
+  "feedSupport": "full",
+  "feedFormulas": [
+    {
+      "formula": ":serverUrl/feeds/all.xml?sort=:sort",
+      "isBridged": false,
+      "name": "Server feed",
+      "description": "Deze feed bevat 20 posts van de server, gesorteerd op de geselecteerde optie."
+    },
+    {
+      "formula": ":serverUrl/feeds/c/:community.xml?sort=:sort",
+      "isBridged": false,
+      "name": "Community feed",
+      "description": "Deze feed bevat 20 posts van een specifieke community op de server, gesorteerd op de geselecteerde optie."
+    }
+  ],
+  "params": {
+    "serverUrl": {
+      "name": "Server URL",
+      "description": "De URL van de Lemmy server.",
+      "placeholder": "https://feddit.nl"
+    },
+    "community": {
+      "name": "Community",
+      "description": "De naam van de community op de Lemmy server.",
+      "placeholder": "theNetherlands"
+    },
+    "sort": {
+      "name": "Sorteer",
+      "description": "Hoe de feed gesorteerd moet worden.",
+      "placeholder": "Actief",
+      "options": {
+        "Active": "Actief",
+        "Scaled": "Geschaald",
+        "Hot": "Populair",
+        "Controversial": "Controversieel",
+        "New": "Nieuw",
+        "Old": "Oud",
+        "MostComments": "Meeste reacties",
+        "NewComments": "Nieuwe reacties",
+        "TopHour": "Top uur",
+        "TopSixHours": "Top zes uur",
+        "TopTwelveHour": "Top twaalf uur",
+        "TopDay": "Top dag",
+        "TopWeek": "Top week",
+        "TopMonth": "Top maand",
+        "TopThreeMonths": "Top drie maanden",
+        "TopSixMonths": "Top zes maanden",
+        "TopNineMonths": "Top negen maanden",
+        "TopYear": "Top jaar",
+        "TopAll": "Top alles"
+      }
+    }
+  }
+}

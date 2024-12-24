@@ -1,0 +1,53 @@
+{
+  "name": "Wikipedia",
+  "description": "Wikipedia is a free online encyclopedia, created and edited by volunteers around the world and hosted by the Wikimedia Foundation. Wikipedia offers RSS feeds for recent changes, new pages, watchlists, and user contributions. They provide official documentation for their feeds on their [Syndication page](https://en.wikipedia.org/wiki/Wikipedia:Syndication).",
+  "feedSupport": "full",
+  "feedFormulas": [
+    {
+      "formula": "https://:lang.wikipedia.org/w/index.php?title=:articleID&action=history&feed=rss ",
+      "isBridged": false,
+      "name": "Article updates",
+      "description": "This feed contains the revision history of a Wikipedia article."
+    },
+    {
+      "formula": "https://:lang.wikipedia.org/w/index.php?title=Special:NewPages&feed=rss",
+      "isBridged": false,
+      "name": "New pages",
+      "description": "This feed contains the newest pages on Wikipedia."
+    },
+    {
+      "formula": "https://:lang.wikipedia.org/w/api.php?action=feedwatchlist&wlowner=:username&wltoken=:authToken",
+      "isBridged": false,
+      "name": "Watchlist",
+      "description": "This feed contains the changes on your [watchlist](https://en.wikipedia.org/wiki/Help:Watchlist). You need to authenticate to access this feed."
+    },
+    {
+      "formula": "https://:lang.wikipedia.org/w/api.php?action=feedcontributions&user=:username",
+      "isBridged": false,
+      "name": "User contributions",
+      "description": "This feed contains the contributions of a Wikipedia user."
+    }
+  ],
+  "params": {
+    "lang": {
+      "name": "Language",
+      "description": "The language code of the Wikipedia site.",
+      "placeholder": "en"
+    },
+    "articleID": {
+      "name": "Article ID",
+      "description": "The ID of the Wikipedia article.",
+      "placeholder": "User_error"
+    },
+    "username": {
+      "name": "Username",
+      "description": "The Wikipedia username.",
+      "placeholder": "GreenC"
+    },
+    "authToken": {
+      "name": "Auth token",
+      "description": "The authorization token for the username you entered. You can find your token in your Wikipedia preferences under **Watchlist**.",
+      "placeholder": "Insert your token here"
+    }
+  }
+}

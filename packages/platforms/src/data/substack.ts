@@ -1,4 +1,4 @@
-import { Platform } from "../types";
+import { Platform } from "@menteka/types";
 
 const substack: Platform = {
   feedSupport: "full",

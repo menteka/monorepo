@@ -1,0 +1,29 @@
+{
+  "name": "Dreamwidth",
+  "description": "Dreamwidth is a writing-focused platform where users create journals. It is based off of LiveJournal but highlights open access, transparency, freedom and respect. Most pages on Dreamwidth have an RSS and Atom feed, including journals. There will be a link to the feed in the sidebar of the journal.",
+  "feedSupport": "full",
+  "feedFormulas": [
+    {
+      "formula": "https://:journal.dreamwidth.org/data/:format",
+      "isBridged": false,
+      "name": "Journal updates",
+      "description": "This feed contains the 25 most recent posts of a journal."
+    }
+  ],
+  "params": {
+    "journal": {
+      "name": "Journal",
+      "description": "The name of the Dreamwidth journal. It is the name under which the posts appear on your Dreamwidth homepage, and it is also the part of the url before dreamwidth.org when you visit the journal.",
+      "placeholder": "100words"
+    },
+    "format": {
+      "name": "Format",
+      "description": "The format of the feed. In practice, most feed readers support both Atom and RSS.",
+      "placeholder": "RSS",
+      "options": {
+        "atom": "Atom",
+        "rss": "RSS"
+      }
+    }
+  }
+}

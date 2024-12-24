@@ -1,0 +1,31 @@
+{
+  "name": "DeviantArt",
+  "description": "DeviantArt is een online platform voor kunstenaars. Gebruikers kunnen verschillende kunstvormen delen en onderling communiceren. De officiële documentatie voor hun feeds is te vinden op hun [developers RSS-documentatie (alleen in het Engels)](https://www.deviantart.com/developers/rss).",
+  "feedSupport": "full",
+  "feedFormulas": [
+    {
+      "formula": "https://backend.deviantart.com/rss.xml?type=deviation&q=by%3:username+sort%3Atime+meta%3Aall",
+      "isBridged": false,
+      "name": "Gebruikersupdates",
+      "description": "Deze feed bevat de laatste uploads van een DeviantArt-gebruiker."
+    },
+    {
+      "formula": "https://backend.deviantart.com/rss.xml?type=deviation&q=boost%3Apopular+in%3Adigitalart%2Fdrawings+:query",
+      "isBridged": false,
+      "name": "Zoekopdracht",
+      "description": "Deze feed bevat de meest populaire uploads in een specifieke categorie."
+    }
+  ],
+  "params": {
+    "username": {
+      "name": "Gebruikersnaam",
+      "description": "De gebruikersnaam van de DeviantArt-gebruiker.",
+      "placeholder": "loish"
+    },
+    "query": {
+      "name": "Zoekopdracht",
+      "description": "De categorie van de uploads.",
+      "placeholder": "kikkers"
+    }
+  }
+}

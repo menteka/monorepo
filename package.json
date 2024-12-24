@@ -10,7 +10,8 @@
   "devDependencies": {
     "prettier": "^3.2.5",
     "turbo": "^2.3.1",
-    "typescript": "5.5.4"
+    "typescript": "5.5.4",
+    "vite-node": "^2.1.8"
   },
   "engines": {
     "node": ">=18"

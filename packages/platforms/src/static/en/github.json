@@ -1,0 +1,59 @@
+{
+  "name": "GitHub",
+  "description": "GitHub is a platform for developers to host and review code, manage projects, and build software. It is a social platform that allows developers to collaborate and contribute to open-source projects.",
+  "feedSupport": "hidden",
+  "feedFormulas": [
+    {
+      "formula": "https://github.com/:username.atom",
+      "isBridged": false,
+      "name": "User activity",
+      "description": "This feed contains the most recent activity of a specific user."
+    },
+    {
+      "formula": "https://github.com/:owner/:repo/releases.atom",
+      "isBridged": false,
+      "name": "Releases",
+      "description": "This feed contains the most recent releases of a specific repository."
+    },
+    {
+      "formula": "https://github.com/:owner/:repo/commits.atom",
+      "isBridged": false,
+      "name": "Commits",
+      "description": "This feed contains the most recent commits of a specific repository."
+    },
+    {
+      "formula": "https://github.com/:owner/:repo/tags.atom",
+      "isBridged": false,
+      "name": "Tags",
+      "description": "This feed contains the most recent tags of a specific repository."
+    },
+    {
+      "formula": "https://github.com/:username.private.atom?token=:token",
+      "isBridged": false,
+      "name": "News feed",
+      "description": "This feed contains the activity of the projects and users you are following. It requires passing an authentication token, which you can generate in your GitHub settings."
+    }
+  ],
+  "params": {
+    "username": {
+      "name": "Username",
+      "description": "The username of the user. You will also find it in the URL of the user's profile.",
+      "placeholder": "leekeh"
+    },
+    "owner": {
+      "name": "Owner",
+      "description": "The owner of the repository. You will also find it in the URL of the repository.",
+      "placeholder": "kovidgoyal"
+    },
+    "repo": {
+      "name": "Repository",
+      "description": "The name of the repository. You will also find it in the URL of the repository.",
+      "placeholder": "calibre"
+    },
+    "token": {
+      "name": "Token",
+      "description": "The token required to access the private feed. You can create a token in your GitHub settings.",
+      "placeholder": "your token here"
+    }
+  }
+}

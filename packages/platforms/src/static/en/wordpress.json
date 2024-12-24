@@ -1,0 +1,59 @@
+{
+  "name": "WordPress.com",
+  "description": "WordPress is a free and open-source blogging tool and website builder. It is the most popular content management system (CMS) on the web. WordPress offers full RSS feed support for their feeds, which they detail in their [support page](https://wordpress.com/support/feeds/). A lot of websites that you use might be powered by WordPress, so you can use this platform to follow their feeds.",
+  "feedSupport": "full",
+  "feedFormulas": [
+    {
+      "formula": ":siteUrl/feed",
+      "isBridged": false,
+      "name": "Site posts",
+      "description": "This feed contains the most recent posts from the site."
+    },
+    {
+      "formula": ":siteUrl/comments/feed",
+      "isBridged": false,
+      "name": "Comments",
+      "description": "This feed contains the most recent comments from the site."
+    },
+    {
+      "formula": ":siteUrl/category/:category/feed",
+      "isBridged": false,
+      "name": "Category posts",
+      "description": "This feed contains the most recent posts from a specific category."
+    },
+    {
+      "formula": ":siteUrl/tag/:tag/feed",
+      "isBridged": false,
+      "name": "Tag posts",
+      "description": "This feed contains the most recent posts from a specific tag."
+    },
+    {
+      "formula": ":siteUrl/author/:author/feed",
+      "isBridged": false,
+      "name": "Author posts",
+      "description": "This feed contains the most recent posts from a specific author."
+    }
+  ],
+  "params": {
+    "siteUrl": {
+      "name": "Site URL",
+      "description": "The URL of the WordPress site.",
+      "placeholder": "https://wordpress.org"
+    },
+    "category": {
+      "name": "Category",
+      "description": "The name of the category on the WordPress site.",
+      "placeholder": "technology"
+    },
+    "tag": {
+      "name": "Tag",
+      "description": "The name of the tag on the WordPress site.",
+      "placeholder": "javascript"
+    },
+    "author": {
+      "name": "Author",
+      "description": "The username of the author on the WordPress site.",
+      "placeholder": "matt"
+    }
+  }
+}

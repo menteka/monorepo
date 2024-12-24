@@ -1,0 +1,53 @@
+{
+  "name": "Wikipedia",
+  "description": "Wikipedia is een gratis online encyclopedie, gemaakt en bewerkt door vrijwilligers van over de hele wereld en gehost door de Wikimedia Foundation. Wikipedia biedt RSS-feeds voor recente wijzigingen, nieuwe pagina's, volglijsten en gebruikersbijdragen. Ze bieden officiële documentatie voor hun feeds op hun [Syndication-pagina (niet beschikbaar in het Nederlands)](https://en.wikipedia.org/wiki/Wikipedia:Syndication).",
+  "feedSupport": "full",
+  "feedFormulas": [
+    {
+      "formula": "https://:lang.wikipedia.org/w/index.php?title=:articleID&action=history&feed=rss ",
+      "isBridged": false,
+      "name": "Artikelupdates",
+      "description": "Deze feed bevat de versiegeschiedenis van een Wikipedia-artikel."
+    },
+    {
+      "formula": "https://:lang.wikipedia.org/w/index.php?title=Special:NewPages&feed=rss",
+      "isBridged": false,
+      "name": "Nieuwe pagina's",
+      "description": "Deze feed bevat de nieuwste pagina's op Wikipedia."
+    },
+    {
+      "formula": "https://:lang.wikipedia.org/w/api.php?action=feedwatchlist&wlowner=:username&wltoken=:authToken",
+      "isBridged": false,
+      "name": "Volglijst",
+      "description": "Deze feed bevat de wijzigingen op je volglijst."
+    },
+    {
+      "formula": "https://:lang.wikipedia.org/w/api.php?action=feedcontributions&user=:username",
+      "isBridged": false,
+      "name": "Gebruikersbijdragen",
+      "description": "Deze feed bevat de bijdragen van een Wikipedia-gebruiker."
+    }
+  ],
+  "params": {
+    "lang": {
+      "name": "Taal",
+      "description": "De taalcode van de Wikipedia-site.",
+      "placeholder": "nl"
+    },
+    "articleID": {
+      "name": "Artikel-ID",
+      "description": "Het ID van het Wikipedia-artikel.",
+      "placeholder": "Johan_de_Witt"
+    },
+    "username": {
+      "name": "Gebruikersnaam",
+      "description": "De Wikipedia-gebruikersnaam.",
+      "placeholder": "Happytravels"
+    },
+    "authToken": {
+      "name": "Authenticatietoken",
+      "description": "Het autorisatietoken voor de gebruikersnaam die u heeft ingevoerd. U kunt uw token vinden in uw Wikipedia-voorkeuren onder **Volglijst**.",
+      "placeholder": "Voer hier uw token in"
+    }
+  }
+}

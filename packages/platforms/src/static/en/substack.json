@@ -1,0 +1,33 @@
+{
+  "name": "Substack",
+  "description": "Substack is a platform that allows writers to publish newsletters. They document full feed support for their publications on [Publications 101](https://support.substack.com/hc/en-us/articles/360038239391-Is-there-an-RSS-feed-for-my-publication).",
+  "feedSupport": "full",
+  "feedFormulas": [
+    {
+      "formula": "https://:publicationName.substack.com/feed",
+      "type": "newsletter",
+      "isBridged": false,
+      "name": "Publication updates",
+      "description": "This feed contains the 20 most recent entries of a Substack publication."
+    },
+    {
+      "formula": ":customDomain/feed",
+      "type": "newsletter",
+      "isBridged": false,
+      "name": "Publication updates (custom domain)",
+      "description": "This feed contains the 20 most recent entries of a Substack publication hosted on a custom domain."
+    }
+  ],
+  "params": {
+    "publicationName": {
+      "name": "Publication name",
+      "description": "The name of the Substack publication. It is the part of the URL after https:// and before .substack.com.",
+      "placeholder": "fionabeckett"
+    },
+    "customDomain": {
+      "name": "Custom domain",
+      "description": "The custom domain of the Substack publication.",
+      "placeholder": "https://blog.bytebytego.com"
+    }
+  }
+}

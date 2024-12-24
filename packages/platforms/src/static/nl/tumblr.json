@@ -1,0 +1,31 @@
+{
+  "name": "Tumblr",
+  "description": "Tumblr is een microbloggingplatform en sociaalnetwerksite. Gebruikers kunnen allerlei korte inhoude delen op hun blog, zoals tekst, afbeeldingen, links en video's.",
+  "feedSupport": "hidden",
+  "feedFormulas": [
+    {
+      "formula": "https://:blogName.tumblr.com/rss",
+      "isBridged": false,
+      "name": "Blog updates",
+      "description": "Deze feed bevat de 20 meest recente berichten van een blog."
+    },
+    {
+      "formula": ":customDomain/rss",
+      "isBridged": false,
+      "name": "Blog updates (eigen domein)",
+      "description": "Deze feed bevat de 20 meest recente berichten van een blog die op een eigen domein wordt gehost."
+    }
+  ],
+  "params": {
+    "blogName": {
+      "name": "Blognaam",
+      "description": "De naam van de Tumblr-blog. Dit is de naam die staat boven de berichten die op je Tumblr tijdlijn verschijnen, en het is ook het deel van de url voor tumblr.com wanneer je de blog bezoekt.",
+      "placeholder": "humans-of-amsterdam"
+    },
+    "customDomain": {
+      "name": "Eigen domein",
+      "description": "Het eigen domein van de Tumblr-blog. Dit is voor blogs die geen tumblr.com-url hebben, maar worden gehost op een eigen domein.",
+      "placeholder": "https://example.com/"
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "DEV Community",
+  "description": "DEV Community is een community van ontwikkelaars die hun werk en kennis delen via artikelen, podcasts en video's.",
+  "feedSupport": "hidden",
+  "feedFormulas": [
+    {
+      "formula": "https://dev.to/feed/:username",
+      "isBridged": false,
+      "name": "Gebruikersactiviteit",
+      "description": "Deze feed bevat de meest recente activiteit van een specifieke gebruiker of organisatie."
+    }
+  ],
+  "params": {
+    "username": {
+      "name": "Gebruikersnaam",
+      "description": "De gebruikersnaam van de gebruiker of organisatie. Je vindt het ook in de URL van het profiel van de gebruiker.",
+      "placeholder": "devteam"
+    }
+  }
+}

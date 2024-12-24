@@ -1,0 +1,59 @@
+{
+  "name": "GitHub",
+  "description": "GitHub is een platform voor ontwikkelaars om code te hosten, projecten te beheren en software te bouwen. Het is een sociaal platform dat ontwikkelaars in staat stelt om samen te werken en bij te dragen aan open-source projecten.",
+  "feedSupport": "hidden",
+  "feedFormulas": [
+    {
+      "formula": "https://github.com/:username.atom",
+      "isBridged": false,
+      "name": "Gebruikersactiviteit",
+      "description": "Deze feed bevat de meest recente activiteit van een specifieke gebruiker."
+    },
+    {
+      "formula": "https://github.com/:owner/:repo/releases.atom",
+      "isBridged": false,
+      "name": "Releases",
+      "description": "Deze feed bevat de meest recente releases van een specifiek repository."
+    },
+    {
+      "formula": "https://github.com/:owner/:repo/commits.atom",
+      "isBridged": false,
+      "name": "Commits",
+      "description": "Deze feed bevat de meest recente commits van een specifiek repository."
+    },
+    {
+      "formula": "https://github.com/:owner/:repo/tags.atom",
+      "isBridged": false,
+      "name": "Tags",
+      "description": "Deze feed bevat de meest recente tags van een specifiek repository."
+    },
+    {
+      "formula": "https://github.com/:username.private.atom?token=:token",
+      "isBridged": false,
+      "name": "Nieuwsfeed",
+      "description": "Deze feed bevat de activiteit van de projecten en gebruikers die je volgt. Het vereist het doorgeven van een authenticatietoken, die je kunt genereren in je GitHub-instellingen."
+    }
+  ],
+  "params": {
+    "username": {
+      "name": "Gebruikersnaam",
+      "description": "De gebruikersnaam van de gebruiker. Je vindt het ook in de URL van het profiel van de gebruiker.",
+      "placeholder": "leekeh"
+    },
+    "owner": {
+      "name": "Eigenaar",
+      "description": "De eigenaar van het repository. Je vindt het ook in de URL van het repository.",
+      "placeholder": "kovidgoyal"
+    },
+    "repo": {
+      "name": "Repository",
+      "description": "De naam van het repository. Je vindt het ook in de URL van het repository.",
+      "placeholder": "calibre"
+    },
+    "token": {
+      "name": "Token",
+      "description": "Het token dat nodig is om toegang te krijgen tot de privéfeed. Je kunt een token aanmaken in je GitHub-instellingen.",
+      "placeholder": "jouw token hier"
+    }
+  }
+}

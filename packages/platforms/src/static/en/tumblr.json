@@ -1,0 +1,31 @@
+{
+  "name": "Tumblr",
+  "description": "Tumblr is a microblogging platform and social networking website. It allows users to post multimedia and other content to a short-form blog.",
+  "feedSupport": "hidden",
+  "feedFormulas": [
+    {
+      "formula": "https://:blogName.tumblr.com/rss",
+      "isBridged": false,
+      "name": "Blog updates",
+      "description": "This feed contains the 20 most recent posts of a blog."
+    },
+    {
+      "formula": ":customDomain/rss",
+      "isBridged": false,
+      "name": "Blog updates (custom domain)",
+      "description": "This feed contains the 20 most recent posts of a blog hosted on a custom domain."
+    }
+  ],
+  "params": {
+    "blogName": {
+      "name": "Blog name",
+      "description": "The name of the Tumblr blog. It is the name under which the posts appear on your Tumblr homepage, and it is also the part of the url before tumblr.com when you visit the blog.",
+      "placeholder": "everydaylouie"
+    },
+    "customDomain": {
+      "name": "Custom domain",
+      "description": "The custom domain of the Tumblr blog. This is for blogs that do not have a tumblr.com url, but are hosted on a custom domain.",
+      "placeholder": "https://example.com/"
+    }
+  }
+}

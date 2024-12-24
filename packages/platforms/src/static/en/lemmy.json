@@ -1,0 +1,57 @@
+{
+  "name": "Lemmy",
+  "description": "Lemmy is a federated link aggregator and discussion platform similar to Reddit. They offer full RSS feed support for their feeds. When you are on a page you will find a link to the RSS feed indicated by the RSS icon next to the sorting options.",
+  "feedSupport": "full",
+  "feedFormulas": [
+    {
+      "formula": ":serverUrl/feeds/all.xml?sort=:sort",
+      "isBridged": false,
+      "name": "Server feed",
+      "description": "This feed contains 20 posts from the server, sorted by the selected option."
+    },
+    {
+      "formula": ":serverUrl/feeds/c/:community.xml?sort=:sort",
+      "isBridged": false,
+      "name": "Community feed",
+      "description": "This feed contains 20 posts from a specific community on the server, sorted by the selected option."
+    }
+  ],
+  "params": {
+    "serverUrl": {
+      "name": "Server URL",
+      "description": "The URL of the Lemmy server.",
+      "placeholder": "https://lemm.ee"
+    },
+    "community": {
+      "name": "Community",
+      "description": "The name of the community on the Lemmy server.",
+      "placeholder": "cassettefuturism"
+    },
+    "sort": {
+      "name": "Sort",
+      "description": "The sorting option of the feed.",
+      "placeholder": "Active",
+      "options": {
+        "Active": "Active",
+        "Scaled": "Scaled",
+        "Hot": "Hot",
+        "Controversial": "Controversial",
+        "New": "New",
+        "Old": "Old",
+        "MostComments": "Most comments",
+        "NewComments": "New comments",
+        "TopHour": "Top hour",
+        "TopSixHours": "Top six hours",
+        "TopTwelveHour": "Top twelve hours",
+        "TopDay": "Top day",
+        "TopWeek": "Top week",
+        "TopMonth": "Top month",
+        "TopThreeMonths": "Top three months",
+        "TopSixMonths": "Top six months",
+        "TopNineMonths": "Top nine months",
+        "TopYear": "Top year",
+        "TopAll": "Top all"
+      }
+    }
+  }
+}

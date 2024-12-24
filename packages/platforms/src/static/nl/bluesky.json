@@ -1,0 +1,20 @@
+{
+  "name": "Bluesky",
+  "description": "Bluesky is een sociaalmediaplatform waar gebruikers korte berichten kunnen plaatsen. Het is vergelijkbaar met Twitter, maar biedt meer aanpasbaarheid betreft algoritmes en meer mogelijkheden voor ontwikkelaars om bovenop het platform te bouwen.",
+  "feedSupport": "full",
+  "feedFormulas": [
+    {
+      "formula": "https://bsky.app/profile/:username/rss",
+      "isBridged": false,
+      "name": "Gebruikersupdates",
+      "description": "Deze feed bevat de meest recente berichten/skeets van een specifieke gebruiker."
+    }
+  ],
+  "params": {
+    "username": {
+      "name": "Gebruikersnaam",
+      "description": "De gebruikersnaam van de gebruiker, exclusief het apestaartje (@). Je vindt het ook in de URL van het profiel van de gebruiker.",
+      "placeholder": "dietukkerfries.bsky.social"
+    }
+  }
+}

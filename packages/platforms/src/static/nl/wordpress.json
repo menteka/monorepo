@@ -1,0 +1,59 @@
+{
+  "name": "WordPress.com",
+  "description": "WordPress is een gratis en open-source blogtool en websitebouwer. Het is het meest populaire contentmanagementsysteem (CMS) op het web. WordPress biedt volledige RSS-feedondersteuning voor hun feeds, die ze gedetailleerd beschrijven in hun [ondersteuningspagina](https://wordpress.com/support/feeds/). Veel websites die je gebruikt, worden mogelijk aangedreven door WordPress, dus je kunt dit platform gebruiken om hun feeds te volgen.",
+  "feedSupport": "full",
+  "feedFormulas": [
+    {
+      "formula": ":siteUrl/feed",
+      "isBridged": false,
+      "name": "Artikelen",
+      "description": "Deze feed bevat de meest recente artikelen van de site."
+    },
+    {
+      "formula": ":siteUrl/comments/feed",
+      "isBridged": false,
+      "name": "Reacties",
+      "description": "Deze feed bevat de meest recente reacties van de site."
+    },
+    {
+      "formula": ":siteUrl/category/:category/feed",
+      "isBridged": false,
+      "name": "Artikelen (per categorie)",
+      "description": "Deze feed bevat de meest recente artikelen van een specifieke categorie."
+    },
+    {
+      "formula": ":siteUrl/tag/:tag/feed",
+      "isBridged": false,
+      "name": "Artikelen (per tag)",
+      "description": "Deze feed bevat de meest recente berichten van een specifieke tag."
+    },
+    {
+      "formula": ":siteUrl/author/:author/feed",
+      "isBridged": false,
+      "name": "Auteursartikelen",
+      "description": "Deze feed bevat de meest recente artikelen van een specifieke auteur."
+    }
+  ],
+  "params": {
+    "siteUrl": {
+      "name": "Site-URL",
+      "description": "De URL van de WordPress-site.",
+      "placeholder": "https://wordpress.org"
+    },
+    "category": {
+      "name": "Categorie",
+      "description": "De naam van de categorie op de WordPress-site.",
+      "placeholder": "technologie"
+    },
+    "tag": {
+      "name": "Tag",
+      "description": "De naam van de tag op de WordPress-site.",
+      "placeholder": "javascript"
+    },
+    "author": {
+      "name": "Auteur",
+      "description": "De gebruikersnaam van de auteur op de WordPress-site.",
+      "placeholder": "matt"
+    }
+  }
+}

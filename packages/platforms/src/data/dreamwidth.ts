@@ -1,4 +1,4 @@
-import { Platform } from "../types";
+import { Platform } from "@menteka/types";
 
 //TODO: verify validity/consistency.
 const dreamwidth: Platform = {

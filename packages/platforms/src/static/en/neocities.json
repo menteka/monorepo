@@ -1,0 +1,20 @@
+{
+  "name": "Neocities",
+  "description": "Neocities is a free web hosting service that allows users to create and host websites. It is a spiritual successor to GeoCities. Users create custom websites in HTML using the built-in code editor. While there is a very basic automatic feed, Neocities also offers documentation on how users can create their own RSS feeds. See the [Neocities RSS guide](https://rssguide.neocities.org/).",
+  "feedSupport": "full",
+  "feedFormulas": [
+    {
+      "formula": "https://neocities.org/site/:siteName.rss",
+      "isBridged": false,
+      "name": "Site updates",
+      "description": "A simple list of the last 10 times the site was updated."
+    }
+  ],
+  "params": {
+    "siteName": {
+      "name": "Site name",
+      "description": "The name of the Neocities site. If the user is hosting their site inside neocities, it will be at siteName.neocities.org.",
+      "placeholder": "pixalina"
+    }
+  }
+}

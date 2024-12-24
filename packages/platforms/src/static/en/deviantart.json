@@ -1,0 +1,31 @@
+{
+  "name": "DeviantArt",
+  "description": "DeviantArt is an online platform for artists. It enables users to share their artwork with others and receive feedback. DeviantArt offers extensive support for RSS feeds, it is possible to query in various different ways. The official documentation for their feeds can be found on their [developers RSS documentation](https://www.deviantart.com/developers/rss).",
+  "feedSupport": "full",
+  "feedFormulas": [
+    {
+      "formula": "https://backend.deviantart.com/rss.xml?type=deviation&q=by%3:username+sort%3Atime+meta%3Aall",
+      "isBridged": false,
+      "name": "User deviations",
+      "description": "This feed contains the **deviations**, i.e. posts of a DeviantArt user."
+    },
+    {
+      "formula": "https://backend.deviantart.com/rss.xml?type=deviation&q=boost%3Apopular+in%3Adigitalart%2Fdrawings+:query",
+      "isBridged": false,
+      "name": "Query",
+      "description": "This feed contains the most popular deviations in a specific category."
+    }
+  ],
+  "params": {
+    "username": {
+      "name": "Username",
+      "description": "The username of the DeviantArt user.",
+      "placeholder": "loish"
+    },
+    "query": {
+      "name": "Query",
+      "description": "The category of the posts.",
+      "placeholder": "frogs"
+    }
+  }
+}

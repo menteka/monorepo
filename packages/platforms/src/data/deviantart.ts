@@ -1,4 +1,4 @@
-import { Platform } from "../types";
+import { Platform } from "@menteka/types";
 
 //TODO this one needs some more research, there are a lot of options.
 const deviantart: Platform = {

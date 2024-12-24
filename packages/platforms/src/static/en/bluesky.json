@@ -1,0 +1,20 @@
+{
+  "name": "Bluesky",
+  "description": "Bluesky is a social media platform where users can post short messages. It is similar to Twitter but includes enhanced customizability for algorithms and more options for developers to build on top of the platform.",
+  "feedSupport": "full",
+  "feedFormulas": [
+    {
+      "formula": "https://bsky.app/profile/:username/rss",
+      "isBridged": false,
+      "name": "User updates",
+      "description": "This feed contains the most recent posts/skeets from a specific user."
+    }
+  ],
+  "params": {
+    "username": {
+      "name": "Username",
+      "description": "The username of the user. Should not include the @. You will also find it in the URL of the user's profile.",
+      "placeholder": "hankgreen.bsky.social"
+    }
+  }
+}

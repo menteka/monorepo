@@ -1,0 +1,20 @@
+{
+  "name": "Neocities",
+  "description": "Neocities is een gratis webhostingdienst waar gebruikers websites kunnen maken en hosten. Het is een spirituele opvolger van GeoCities. Gebruikers kunnen hun eigen websites in HTML maken met behulp van de ingebouwde code-editor. Hoewel er een zeer eenvoudige automatische feed is, biedt Neocities ook documentatie over hoe gebruikers hun eigen RSS-feeds kunnen maken. Zie de [Neocities RSS-gids (Engelstalige link)](https://rssguide.neocities.org/).",
+  "feedSupport": "full",
+  "feedFormulas": [
+    {
+      "formula": "https://neocities.org/site/:siteName.rss",
+      "isBridged": false,
+      "name": "Site-updates",
+      "description": "Een eenvoudige lijst van de laatste 10 keer dat de site is bijgewerkt."
+    }
+  ],
+  "params": {
+    "siteName": {
+      "name": "Sitenaam",
+      "description": "De naam van de Neocities-site. Als de gebruiker zijn site host op neocities, zal deze te vinden zijn op sitenaam.neocities.org.",
+      "placeholder": "freckleskies"
+    }
+  }
+}

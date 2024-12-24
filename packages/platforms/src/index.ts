@@ -1,8 +1,9 @@
-import { SupportedLanguage } from "./types";
+import { SupportedLanguage, SupportedPlatforms } from "@menteka/types";
+import * as data from "./static/index";
 
-function getPlatformData(
-  platformId: string,
+export function getPlatformData(
+  platformId: SupportedPlatforms,
   langCode: SupportedLanguage = "en"
 ) {
-  return "This is a platform";
+  return data[langCode][platformId];
 }
