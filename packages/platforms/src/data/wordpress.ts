@@ -23,7 +23,8 @@ const wordpress: Platform = {
     en: {
       name: "WordPress.com",
       description:
-        "WordPress is a free and open-source blogging tool and website builder. It is the most popular content management system (CMS) on the web. WordPress offers full RSS feed support for their feeds, which they detail in their [support page](https://wordpress.com/support/feeds/). A lot of websites that you use might be powered by WordPress, so you can use this platform to follow their feeds.",
+        "WordPress is a free and open-source blogging tool and website builder. It is the most popular content management system (CMS) on the web. A lot of websites that you use might be powered by WordPress, so you can use this platform to follow their feeds.",
+      documentationUrl: "https://wordpress.com/support/feeds/",
       feedFormulas: {
         sitePosts: {
           name: "Site posts",
@@ -77,7 +78,8 @@ const wordpress: Platform = {
     nl: {
       name: "WordPress.com",
       description:
-        "WordPress is een gratis en open-source blogtool en websitebouwer. Het is het meest populaire contentmanagementsysteem (CMS) op het web. WordPress biedt volledige RSS-feedondersteuning voor hun feeds, die ze gedetailleerd beschrijven in hun [ondersteuningspagina](https://wordpress.com/support/feeds/). Veel websites die je gebruikt, worden mogelijk aangedreven door WordPress, dus je kunt dit platform gebruiken om hun feeds te volgen.",
+        "WordPress is een gratis en open-source blogtool en websitebouwer. Het is het meest populaire contentmanagementsysteem (CMS) op het web. WordPress biedt volledige RSS-feedondersteuning voor hun feeds. Veel websites die je gebruikt, worden mogelijk aangedreven door WordPress, dus je kunt dit platform gebruiken om hun feeds te volgen.",
+      documentationUrl: "https://wordpress.com/support/feeds/",
       feedFormulas: {
         sitePosts: {
           name: "Artikelen",

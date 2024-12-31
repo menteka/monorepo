@@ -1,6 +1,6 @@
 {
   "name": "DeviantArt",
-  "description": "DeviantArt is an online platform for artists. It enables users to share their artwork with others and receive feedback. DeviantArt offers extensive support for RSS feeds, it is possible to query in various different ways. The official documentation for their feeds can be found on their [developers RSS documentation](https://www.deviantart.com/developers/rss).",
+  "description": "DeviantArt is an online platform for artists. It enables users to share their artwork with others and receive feedback. DeviantArt offers extensive support for RSS feeds, it is possible to query in various different ways.",
   "feedSupport": "full",
   "feedFormulas": [
     {
@@ -27,5 +27,6 @@
       "description": "The category of the posts.",
       "placeholder": "frogs"
     }
-  }
+  },
+  "documentationUrl": "https://www.deviantart.com/developers/rss"
 }

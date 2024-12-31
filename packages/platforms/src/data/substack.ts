@@ -16,7 +16,9 @@ const substack: Platform = {
     en: {
       name: "Substack",
       description:
-        "Substack is a platform that allows writers to publish newsletters. They document full feed support for their publications on [Publications 101](https://support.substack.com/hc/en-us/articles/360038239391-Is-there-an-RSS-feed-for-my-publication).",
+        "Substack is a platform that allows writers to publish newsletters.",
+      documentationUrl:
+        "https://support.substack.com/hc/en-us/articles/360038239391-Is-there-an-RSS-feed-for-my-publication",
       feedFormulas: {
         publicationUpdates: {
           name: "Publication updates",
@@ -45,8 +47,9 @@ const substack: Platform = {
     },
     nl: {
       name: "Substack",
-      description:
-        "Substack is een platform voor nieuwsbrieven. Ze documenteren volledige feed-ondersteuning voor hun publicaties op [Publications 101 (Engelstalig)](https://support.substack.com/hc/en-us/articles/360038239391-Is-there-an-RSS-feed-for-my-publication).",
+      description: "Substack is een platform voor nieuwsbrieven.",
+      documentationUrl:
+        "https://support.substack.com/hc/en-us/articles/360038239391-Is-there-an-RSS-feed-for-my-publication",
       feedFormulas: {
         publicationUpdates: {
           name: "Publicatie-updates",

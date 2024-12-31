@@ -1,6 +1,6 @@
 {
   "name": "WordPress.com",
-  "description": "WordPress is een gratis en open-source blogtool en websitebouwer. Het is het meest populaire contentmanagementsysteem (CMS) op het web. WordPress biedt volledige RSS-feedondersteuning voor hun feeds, die ze gedetailleerd beschrijven in hun [ondersteuningspagina](https://wordpress.com/support/feeds/). Veel websites die je gebruikt, worden mogelijk aangedreven door WordPress, dus je kunt dit platform gebruiken om hun feeds te volgen.",
+  "description": "WordPress is een gratis en open-source blogtool en websitebouwer. Het is het meest populaire contentmanagementsysteem (CMS) op het web. WordPress biedt volledige RSS-feedondersteuning voor hun feeds. Veel websites die je gebruikt, worden mogelijk aangedreven door WordPress, dus je kunt dit platform gebruiken om hun feeds te volgen.",
   "feedSupport": "full",
   "feedFormulas": [
     {
@@ -55,5 +55,6 @@
       "description": "De gebruikersnaam van de auteur op de WordPress-site.",
       "placeholder": "matt"
     }
-  }
+  },
+  "documentationUrl": "https://wordpress.com/support/feeds/"
 }

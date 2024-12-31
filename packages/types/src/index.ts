@@ -10,6 +10,7 @@ export type Platform = {
   translations: Record<
     SupportedLanguage,
     Translation & {
+      documentationUrl?: string;
       feedFormulas: {
         [K in keyof Platform["feedFormulas"]]: Translation;
       };

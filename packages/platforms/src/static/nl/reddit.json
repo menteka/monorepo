@@ -1,0 +1,108 @@
+{
+  "name": "Reddit",
+  "description": "Reddit is een sociaal nieuwsaggregatie-, webcontentbeoordelings- en discussiewebsite. Het is een platform waar geregistreerde leden inhoud kunnen indienen, zoals tekstberichten of directe links naar andere platforms.",
+  "feedSupport": "full",
+  "feedFormulas": [
+    {
+      "formula": "https://www.reddit.com/.rss",
+      "isBridged": false,
+      "name": "Homepage",
+      "description": "Deze feed bevat de meest recente berichten van de Reddit-startpagina."
+    },
+    {
+      "formula": "https://www.reddit.com/:sort/.rss",
+      "isBridged": false,
+      "name": "Homepage gesorteerd",
+      "description": "Deze feed bevat de meest recente berichten van de Reddit-startpagina, gesorteerd op een specifieke parameter."
+    },
+    {
+      "formula": "https://www.reddit.com/r/:subreddit/.rss",
+      "isBridged": false,
+      "name": "Subreddit",
+      "description": "Deze feed bevat de meest recente berichten van een specifieke subreddit."
+    },
+    {
+      "formula": "https://www.reddit.com/r/:subreddit/:sort/",
+      "isBridged": false,
+      "name": "Subreddit gesorteerd",
+      "description": "Deze feed bevat de meest recente berichten van een specifieke subreddit, gesorteerd op een specifieke parameter."
+    },
+    {
+      "formula": "https://www.reddit.com/user/:username/.rss",
+      "isBridged": false,
+      "name": "Gebruikersupdates",
+      "description": "Deze feed bevat de meest recente updates van een Reddit-gebruiker."
+    },
+    {
+      "formula": "https://www.reddit.com/user/:username/submitted/.rss",
+      "isBridged": false,
+      "name": "Gebruikersberichten",
+      "description": "Deze feed bevat de meest recente berichten van een Reddit-gebruiker."
+    },
+    {
+      "formula": "https://www.reddit.com/user/:username/comments/.rss",
+      "isBridged": false,
+      "name": "Gebruikersreacties",
+      "description": "Deze feed bevat de meest recente reacties van een Reddit-gebruiker."
+    },
+    {
+      "formula": "https://www.reddit.com/r/:subreddit+:subreddit2/.rss",
+      "isBridged": false,
+      "name": "Subredditcombinatie",
+      "description": "Deze feed bevat de meest recente berichten van een combinatie van subreddits."
+    },
+    {
+      "formula": "https://www.reddit.com/r/:subreddit+:subreddit2/:sort/.rss",
+      "isBridged": false,
+      "name": "Subredditcombinatie gesorteerd",
+      "description": "Deze feed bevat de meest recente berichten van een combinatie van subreddits, gesorteerd op een specifieke parameter."
+    },
+    {
+      "formula": "https://www.reddit.com/domain/:domain/.rss",
+      "isBridged": false,
+      "name": "Domeinupdates",
+      "description": "Deze feed bevat de meest recente berichten van een specifiek domein."
+    },
+    {
+      "formula": "https://www.reddit.com/domain/:domain/:sort/.rss",
+      "isBridged": false,
+      "name": "Domeinupdates gesorteerd",
+      "description": "Deze feed bevat de meest recente berichten van een specifiek domein, gesorteerd op een specifieke parameter."
+    }
+  ],
+  "params": {
+    "subreddit": {
+      "name": "Subreddit",
+      "description": "De naam van de subreddit. Het is het deel van de URL na reddit.com/r/.",
+      "placeholder": "thenetherlands"
+    },
+    "sort": {
+      "name": "Sorteren",
+      "description": "De sorteermethode voor de feed. Het kan hot, nieuw, stijgend, controversieel of top zijn.",
+      "placeholder": "hot",
+      "options": {
+        "hot": "Populair",
+        "new": "Nieuw",
+        "rising": "Stijgend",
+        "controversial": "Controversieel",
+        "top": "Top"
+      }
+    },
+    "username": {
+      "name": "Gebruikersnaam",
+      "description": "De gebruikersnaam van de Reddit-gebruiker.",
+      "placeholder": "kn0thing"
+    },
+    "subreddit2": {
+      "name": "Subreddit 2",
+      "description": "De naam van de tweede subreddit voor de combinatiefeed.",
+      "placeholder": "thenetherlands"
+    },
+    "domain": {
+      "name": "Domein",
+      "description": "De domeinnaam van de berichten.",
+      "placeholder": "youtube.com"
+    }
+  },
+  "documentationUrl": "https://www.reddit.com/wiki/rss"
+}

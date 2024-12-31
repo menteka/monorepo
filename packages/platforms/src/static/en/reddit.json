@@ -1,0 +1,108 @@
+{
+  "name": "Reddit",
+  "description": "Reddit is a social news aggregation, web content rating, and discussion website. It is a platform where registered members can submit content, such as text posts or direct links to other platforms.",
+  "feedSupport": "full",
+  "feedFormulas": [
+    {
+      "formula": "https://www.reddit.com/.rss",
+      "isBridged": false,
+      "name": "Homepage",
+      "description": "This feed contains the most recent posts from the Reddit homepage."
+    },
+    {
+      "formula": "https://www.reddit.com/:sort/.rss",
+      "isBridged": false,
+      "name": "Homepage sorted",
+      "description": "This feed contains the most recent posts from the Reddit homepage, sorted by a specific parameter."
+    },
+    {
+      "formula": "https://www.reddit.com/r/:subreddit/.rss",
+      "isBridged": false,
+      "name": "Subreddit",
+      "description": "This feed contains the most recent posts from a specific subreddit."
+    },
+    {
+      "formula": "https://www.reddit.com/r/:subreddit/:sort/",
+      "isBridged": false,
+      "name": "Subreddit sorted",
+      "description": "This feed contains the most recent posts from a specific subreddit, sorted by a specific parameter."
+    },
+    {
+      "formula": "https://www.reddit.com/user/:username/.rss",
+      "isBridged": false,
+      "name": "User updates",
+      "description": "This feed contains the most recent updates from a Reddit user."
+    },
+    {
+      "formula": "https://www.reddit.com/user/:username/submitted/.rss",
+      "isBridged": false,
+      "name": "User posts",
+      "description": "This feed contains the most recent posts from a Reddit user."
+    },
+    {
+      "formula": "https://www.reddit.com/user/:username/comments/.rss",
+      "isBridged": false,
+      "name": "User comments",
+      "description": "This feed contains the most recent comments from a Reddit user."
+    },
+    {
+      "formula": "https://www.reddit.com/r/:subreddit+:subreddit2/.rss",
+      "isBridged": false,
+      "name": "Subreddit combination",
+      "description": "This feed contains the most recent posts from a combination of subreddits."
+    },
+    {
+      "formula": "https://www.reddit.com/r/:subreddit+:subreddit2/:sort/.rss",
+      "isBridged": false,
+      "name": "Subreddit combination sorted",
+      "description": "This feed contains the most recent posts from a combination of subreddits, sorted by a specific parameter."
+    },
+    {
+      "formula": "https://www.reddit.com/domain/:domain/.rss",
+      "isBridged": false,
+      "name": "Domain updates",
+      "description": "This feed contains the most recent posts from a specific domain."
+    },
+    {
+      "formula": "https://www.reddit.com/domain/:domain/:sort/.rss",
+      "isBridged": false,
+      "name": "Domain updates sorted",
+      "description": "This feed contains the most recent posts from a specific domain, sorted by a specific parameter."
+    }
+  ],
+  "params": {
+    "subreddit": {
+      "name": "Subreddit",
+      "description": "The name of the subreddit. It is the part of the URL after reddit.com/r/.",
+      "placeholder": "worldnews"
+    },
+    "sort": {
+      "name": "Sort",
+      "description": "The sorting parameter for the feed. It can be hot, new, rising, controversial, or top.",
+      "placeholder": "hot",
+      "options": {
+        "hot": "Hot",
+        "new": "New",
+        "rising": "Rising",
+        "controversial": "Controversial",
+        "top": "Top"
+      }
+    },
+    "username": {
+      "name": "Username",
+      "description": "The username of the Reddit user.",
+      "placeholder": "spez"
+    },
+    "subreddit2": {
+      "name": "Subreddit 2",
+      "description": "The name of the second subreddit for the combination feed.",
+      "placeholder": "programming"
+    },
+    "domain": {
+      "name": "Domain",
+      "description": "The domain name of the posts.",
+      "placeholder": "youtube.com"
+    }
+  },
+  "documentationUrl": "https://www.reddit.com/wiki/rss"
+}

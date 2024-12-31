@@ -24,7 +24,8 @@ const wikipedia: Platform = {
     en: {
       name: "Wikipedia",
       description:
-        "Wikipedia is a free online encyclopedia, created and edited by volunteers around the world and hosted by the Wikimedia Foundation. Wikipedia offers RSS feeds for recent changes, new pages, watchlists, and user contributions. They provide official documentation for their feeds on their [Syndication page](https://en.wikipedia.org/wiki/Wikipedia:Syndication).",
+        "Wikipedia is a free online encyclopedia, created and edited by volunteers around the world and hosted by the Wikimedia Foundation. Wikipedia offers RSS feeds for recent changes, new pages, watchlists, and user contributions.",
+      documentationUrl: "https://en.wikipedia.org/wiki/Wikipedia:Syndication",
       feedFormulas: {
         articleUpdates: {
           name: "Article updates",
@@ -73,7 +74,8 @@ const wikipedia: Platform = {
     nl: {
       name: "Wikipedia",
       description:
-        "Wikipedia is een gratis online encyclopedie, gemaakt en bewerkt door vrijwilligers van over de hele wereld en gehost door de Wikimedia Foundation. Wikipedia biedt RSS-feeds voor recente wijzigingen, nieuwe pagina's, volglijsten en gebruikersbijdragen. Ze bieden officiële documentatie voor hun feeds op hun [Syndication-pagina (niet beschikbaar in het Nederlands)](https://en.wikipedia.org/wiki/Wikipedia:Syndication).",
+        "Wikipedia is een gratis online encyclopedie, gemaakt en bewerkt door vrijwilligers van over de hele wereld en gehost door de Wikimedia Foundation. Wikipedia biedt RSS-feeds voor recente wijzigingen, nieuwe pagina's, volglijsten en gebruikersbijdragen.",
+      documentationUrl: "https://en.wikipedia.org/wiki/Wikipedia:Syndication",
       feedFormulas: {
         articleUpdates: {
           name: "Artikelupdates",

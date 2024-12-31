@@ -1,0 +1,60 @@
+{
+  "name": "Medium",
+  "description": "Medium is an online platform for professional and amateur writers to publish articles. It is also a social platform where users can follow each other and recommend articles.",
+  "feedSupport": "full",
+  "feedFormulas": [
+    {
+      "formula": "medium.com/feed/:username",
+      "isBridged": false,
+      "name": "User posts",
+      "description": "This feed contains the most recent posts of a Medium user."
+    },
+    {
+      "formula": ":customdomain/feed",
+      "isBridged": false,
+      "name": "User posts (custom domain)",
+      "description": "This feed contains the most recent posts of a Medium user on a custom domain."
+    },
+    {
+      "formula": "medium.com/feed/:publication",
+      "isBridged": false,
+      "name": "Publication posts",
+      "description": "This feed contains the most recent posts of a Medium publication."
+    },
+    {
+      "formula": "medium.com/feed/:publication/tagged/:tagName",
+      "isBridged": false,
+      "name": "Publication tags",
+      "description": "This feed contains the most recent posts of a Medium publication with a specific tag."
+    },
+    {
+      "formula": "medium.com/feed/tag/:tagName",
+      "isBridged": false,
+      "name": "Tag updates",
+      "description": "This feed contains the most recent posts with a specific tag."
+    }
+  ],
+  "params": {
+    "username": {
+      "name": "Username",
+      "description": "The username of the Medium user. It is the part of the URL after medium.com/@.",
+      "placeholder": "creativecommons"
+    },
+    "customdomain": {
+      "name": "Custom domain",
+      "description": "The custom domain of the Medium user.",
+      "placeholder": "https://danny.fyi"
+    },
+    "publication": {
+      "name": "Publication",
+      "description": "The publication name of the Medium publication. It is the part of the URL after medium.com/.",
+      "placeholder": "making-sharing-meaningful"
+    },
+    "tagName": {
+      "name": "Tag name",
+      "description": "The tag name of the Medium posts.",
+      "placeholder": "writing"
+    }
+  },
+  "documentationUrl": "https://help.medium.com/hc/en-us/articles/214874118-RSS-feeds"
+}

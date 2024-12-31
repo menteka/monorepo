@@ -1,2 +1,2 @@
 /** This file is auto-generated in `packages/platforms/build.ts`. Do not modify it manually. **/
-export type SupportedPlatforms = "ao3" | "bluesky" | "dev" | "deviantart" | "dreamwidth" | "github" | "lemmy" | "mastodon" | "neocities" | "pinterest" | "substack" | "tumblr" | "wikipedia" | "wordpress" | "youtube"
+export type SupportedPlatforms = "ao3" | "bluesky" | "dev" | "deviantart" | "dreamwidth" | "github" | "lemmy" | "mastodon" | "medium" | "neocities" | "pinterest" | "reddit" | "substack" | "tumblr" | "wikipedia" | "wordpress" | "youtube"

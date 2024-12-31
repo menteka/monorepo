@@ -1,6 +1,6 @@
 {
   "name": "Substack",
-  "description": "Substack is a platform that allows writers to publish newsletters. They document full feed support for their publications on [Publications 101](https://support.substack.com/hc/en-us/articles/360038239391-Is-there-an-RSS-feed-for-my-publication).",
+  "description": "Substack is a platform that allows writers to publish newsletters.",
   "feedSupport": "full",
   "feedFormulas": [
     {
@@ -29,5 +29,6 @@
       "description": "The custom domain of the Substack publication.",
       "placeholder": "https://blog.bytebytego.com"
     }
-  }
+  },
+  "documentationUrl": "https://support.substack.com/hc/en-us/articles/360038239391-Is-there-an-RSS-feed-for-my-publication"
 }

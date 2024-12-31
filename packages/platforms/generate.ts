@@ -31,6 +31,7 @@ async function build() {
         feedFormulas: feedFormulaTranslations,
         description,
         name,
+        documentationUrl,
       } = (file as Platform).translations[lang];
       const { feedSupport, feedFormulas: feedFormulaValues } = file as Platform;
       const feedFormulas = Object.entries(feedFormulaValues).map(
@@ -41,7 +42,14 @@ async function build() {
           ...feedFormulaTranslations[key],
         })
       );
-      const result = { name, description, feedSupport, feedFormulas, params };
+      const result = {
+        name,
+        description,
+        feedSupport,
+        feedFormulas,
+        params,
+        documentationUrl,
+      };
 
       writeFile(
         `./src/static/${lang}/${platformId}.json`,

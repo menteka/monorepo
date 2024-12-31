@@ -1,6 +1,6 @@
 {
   "name": "Archive of Our Own -z AO3",
-  "description": "Archive of Our Own is an online platform for creative writing, predominantly focused on **fanfiction*. They have some support of RSS feeds documented in their [FAQ](https://archiveofourown.org/faq/subscriptions-and-feeds?language_id=en#subscribefeed).",
+  "description": "Archive of Our Own is an online platform for creative writing, predominantly focused on **fanfiction*.",
   "feedSupport": "full",
   "feedFormulas": [
     {
@@ -16,5 +16,6 @@
       "description": "The ID of the tag.",
       "placeholder": "13052407"
     }
-  }
+  },
+  "documentationUrl": "https://archiveofourown.org/faq/subscriptions-and-feeds?language_id=en#subscribefeed"
 }

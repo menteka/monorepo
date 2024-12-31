@@ -1,0 +1,60 @@
+{
+  "name": "Medium",
+  "description": "Medium is een online platform voor professionele en amateur schrijvers om artikelen te publiceren. Het is ook een sociaal platform waar gebruikers elkaar kunnen volgen en artikelen kunnen aanbevelen.",
+  "feedSupport": "full",
+  "feedFormulas": [
+    {
+      "formula": "medium.com/feed/:username",
+      "isBridged": false,
+      "name": "Gebruikersupdates",
+      "description": "Deze feed bevat de meest recente uploads van een Medium-gebruiker."
+    },
+    {
+      "formula": ":customdomain/feed",
+      "isBridged": false,
+      "name": "Gebruikersupdates (eigen domein)",
+      "description": "Deze feed bevat de meest recente uploads van een Medium-gebruiker op een eigen domein."
+    },
+    {
+      "formula": "medium.com/feed/:publication",
+      "isBridged": false,
+      "name": "Publicatie-updates",
+      "description": "Deze feed bevat de meest recente uploads van een Medium-publicatie."
+    },
+    {
+      "formula": "medium.com/feed/:publication/tagged/:tagName",
+      "isBridged": false,
+      "name": "Publicatie-updates",
+      "description": "Deze feed bevat de meest recente uploads van een Medium-publicatie met een specifieke tag/categorie."
+    },
+    {
+      "formula": "medium.com/feed/tag/:tagName",
+      "isBridged": false,
+      "name": "Tag-updates",
+      "description": "Deze feed bevat de meest recente uploads met een specifieke tag/categorie."
+    }
+  ],
+  "params": {
+    "username": {
+      "name": "Gebruikersnaam",
+      "description": "De gebruikersnaam van de Medium-gebruiker. Het is het deel van de URL na medium.com/@.",
+      "placeholder": "nos-digital"
+    },
+    "customdomain": {
+      "name": "Eigen domein",
+      "description": "Het eigen domein van de Medium-gebruiker.",
+      "placeholder": "https://updates.dasmag.nl/"
+    },
+    "publication": {
+      "name": "Publicatie",
+      "description": "De publicatienaam van de Medium-publicatie. Het is het deel van de URL na medium.com/.",
+      "placeholder": "better-marketing"
+    },
+    "tagName": {
+      "name": "Tag-naam",
+      "description": "De tag-naam van de Medium-uploads.",
+      "placeholder": "writing"
+    }
+  },
+  "documentationUrl": "https://help.medium.com/hc/en-us/articles/214874118-RSS-feeds"
+}

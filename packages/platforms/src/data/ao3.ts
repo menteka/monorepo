@@ -11,8 +11,9 @@ const ao3: Platform = {
     en: {
       name: "Archive of Our Own -z AO3",
       description:
-        "Archive of Our Own is an online platform for creative writing, predominantly focused on **fanfiction*. They have some support of RSS feeds documented in their [FAQ](https://archiveofourown.org/faq/subscriptions-and-feeds?language_id=en#subscribefeed).",
-
+        "Archive of Our Own is an online platform for creative writing, predominantly focused on **fanfiction*.",
+      documentationUrl:
+        "https://archiveofourown.org/faq/subscriptions-and-feeds?language_id=en#subscribefeed",
       feedFormulas: {
         tagUpdates: {
           name: "Tag updates",
@@ -31,7 +32,9 @@ const ao3: Platform = {
     nl: {
       name: "Archive of Our Own - AO3 (Ons Eigen Archief)",
       description:
-        "Archive of Our Own is een online platform voor creatief schrijven, voornamelijk gericht op **fanfictie**. Ze hebben enige ondersteuning voor RSS-feeds gedocumenteerd in hun [FAQ](https://archiveofourown.org/faq/subscriptions-and-feeds?language_id=nl#subscribefeed).",
+        "Archive of Our Own is een online platform voor creatief schrijven, voornamelijk gericht op **fanfictie**.",
+      documentationUrl:
+        "https://archiveofourown.org/faq/subscriptions-and-feeds?language_id=nl#subscribefeed",
       feedFormulas: {
         tagUpdates: {
           name: "Tag updates",

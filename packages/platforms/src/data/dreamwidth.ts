@@ -13,6 +13,8 @@ const dreamwidth: Platform = {
       name: "Dreamwidth",
       description:
         "Dreamwidth is a writing-focused platform where users create journals. It is based off of LiveJournal but highlights open access, transparency, freedom and respect. Most pages on Dreamwidth have an RSS and Atom feed, including journals. There will be a link to the feed in the sidebar of the journal.",
+      documentationUrl:
+        "https://www.dreamwidth.org/support/faqbrowse?faqid=117&q=feeds&lang=",
       feedFormulas: {
         journalUpdates: {
           name: "Journal updates",
@@ -42,6 +44,8 @@ const dreamwidth: Platform = {
     nl: {
       name: "Dreamwidth",
       description: `Dreamwidth is een platform gericht op schrijven van "journals", dat zijn digitale tijdschriften en/of dagboeken. Het is gebaseerd op LiveJournal, maar benadrukt open toegang, transparantie, vrijheid en respect. De meeste pagina's op Dreamwidth hebben een RSS- en Atom-feed. Er staat meestal een link naar de feed aan de zijkant van de pagina.`,
+      documentationUrl:
+        "https://www.dreamwidth.org/support/faqbrowse?faqid=117&q=feeds&lang=",
       feedFormulas: {
         journalUpdates: {
           name: "Blad updates",

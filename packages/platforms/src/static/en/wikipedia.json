@@ -1,6 +1,6 @@
 {
   "name": "Wikipedia",
-  "description": "Wikipedia is a free online encyclopedia, created and edited by volunteers around the world and hosted by the Wikimedia Foundation. Wikipedia offers RSS feeds for recent changes, new pages, watchlists, and user contributions. They provide official documentation for their feeds on their [Syndication page](https://en.wikipedia.org/wiki/Wikipedia:Syndication).",
+  "description": "Wikipedia is a free online encyclopedia, created and edited by volunteers around the world and hosted by the Wikimedia Foundation. Wikipedia offers RSS feeds for recent changes, new pages, watchlists, and user contributions.",
   "feedSupport": "full",
   "feedFormulas": [
     {
@@ -49,5 +49,6 @@
       "description": "The authorization token for the username you entered. You can find your token in your Wikipedia preferences under **Watchlist**.",
       "placeholder": "Insert your token here"
     }
-  }
+  },
+  "documentationUrl": "https://en.wikipedia.org/wiki/Wikipedia:Syndication"
 }

@@ -1,6 +1,6 @@
 {
   "name": "WordPress.com",
-  "description": "WordPress is a free and open-source blogging tool and website builder. It is the most popular content management system (CMS) on the web. WordPress offers full RSS feed support for their feeds, which they detail in their [support page](https://wordpress.com/support/feeds/). A lot of websites that you use might be powered by WordPress, so you can use this platform to follow their feeds.",
+  "description": "WordPress is a free and open-source blogging tool and website builder. It is the most popular content management system (CMS) on the web. A lot of websites that you use might be powered by WordPress, so you can use this platform to follow their feeds.",
   "feedSupport": "full",
   "feedFormulas": [
     {
@@ -55,5 +55,6 @@
       "description": "The username of the author on the WordPress site.",
       "placeholder": "matt"
     }
-  }
+  },
+  "documentationUrl": "https://wordpress.com/support/feeds/"
 }

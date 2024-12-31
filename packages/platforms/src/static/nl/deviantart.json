@@ -1,6 +1,6 @@
 {
   "name": "DeviantArt",
-  "description": "DeviantArt is een online platform voor kunstenaars. Gebruikers kunnen verschillende kunstvormen delen en onderling communiceren. De officiële documentatie voor hun feeds is te vinden op hun [developers RSS-documentatie (alleen in het Engels)](https://www.deviantart.com/developers/rss).",
+  "description": "DeviantArt is een online platform voor kunstenaars. Gebruikers kunnen verschillende kunstvormen delen en onderling communiceren.",
   "feedSupport": "full",
   "feedFormulas": [
     {
@@ -27,5 +27,6 @@
       "description": "De categorie van de uploads.",
       "placeholder": "kikkers"
     }
-  }
+  },
+  "documentationUrl": "https://www.deviantart.com/developers/rss"
 }
