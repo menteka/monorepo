@@ -14,10 +14,9 @@
   let feed = $state([]);
 
   onMount(async () => {
-    feedCache.addFeed({ title: "Grote Podcastlas" });
-    const a = await feedCache.getAllFeeds();
-    console.log(a);
-    // feed = await fetchFeed();
+    // feedCache.addFeed({ title: "Grote Podcastlas" });
+    // const a = await feedCache.getAllFeeds();
+    feed = await fetchFeed();
     isLoading = false;
   });
 </script>

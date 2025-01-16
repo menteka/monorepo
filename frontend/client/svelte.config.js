@@ -21,8 +21,9 @@ const config = {
       "@db": "src/lib/db/index",
       "@logic/*": "src/lib/logic/*",
       "@parser": "src/lib/parser/index",
-      "@translations": "src/lib/translations/index",
+      "@settings": "src/lib/settings/index",
       "@svelte/*": "node_modules/svelte/*",
+      "@translations": "src/lib/translations/index",
     },
   },
 };

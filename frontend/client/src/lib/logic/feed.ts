@@ -1,5 +1,5 @@
 import { FeedParser } from "@menteka/parser";
-// import { fetch } from "@tauri-apps/plugin-http";
+import { fetch } from "@tauri-apps/plugin-http";
 
 const urls = [
   "https://rss.art19.com/de-grote-podcastlas",

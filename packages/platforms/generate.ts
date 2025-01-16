@@ -2,7 +2,7 @@ import { Platform, SupportedLanguage } from "@menteka/types";
 import { writeFile, mkdir } from "fs/promises";
 import { performance } from "perf_hooks";
 
-const langs: SupportedLanguage[] = ["en", "nl"];
+export const langs: SupportedLanguage[] = ["en", "nl"];
 const disclaimer = `/** This file is auto-generated in \`packages/platforms/build.ts\`. Do not modify it manually. **/\n`;
 
 build();

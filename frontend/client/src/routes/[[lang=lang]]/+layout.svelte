@@ -1,26 +1,34 @@
 <script lang="ts">
-  import { initConfig, accessConfig } from "$lib/config/config.svelte";
+  import { initializeSettings, themes } from "@settings";
   import { Layout } from "@components";
   import { feedCache } from "@db";
   import { onMount } from "svelte";
 
   let { children } = $props();
-
-  const config = accessConfig();
+  let theme = $state("");
 
   onMount(async () => {
-    initConfig();
     feedCache.init();
+    const settings = await initializeSettings();
+    theme = settings.theme.value;
   });
+
+  function onchange() {
+    document.head.querySelector("link")!.href = `/themes/${theme}.css`;
+  }
 </script>
 
-<!-- TODO add splashscreen onmount for at least 1 second :) so there is no flashing -->
-
 <svelte:head>
-  {#if config.theme}
-    <link rel="stylesheet" href="/themes/{config.theme}.css" />
+  {#if theme}
+    <link rel="stylesheet" href="/themes/{theme}.css" />
   {/if}
 </svelte:head>
 <Layout>
   {@render children()}
+  <p>{theme}</p>
+  <select bind:value={theme} {onchange}>
+    {#each themes as theme}
+      <option value={theme}>{theme}</option>
+    {/each}
+  </select>
 </Layout>

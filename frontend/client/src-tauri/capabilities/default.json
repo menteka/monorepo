@@ -21,6 +21,7 @@
     "core:default",
     "http:default",
     "notification:default",
-    "sql:default"
+    "sql:default",
+    "store:default"
   ]
 }
