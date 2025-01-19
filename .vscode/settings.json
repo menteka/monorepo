@@ -1,0 +1,6 @@
+{
+  "workbench.editor.labelFormat": "short",
+  "search.exclude": {
+    "backend/d1-manager": true
+  }
+}

@@ -3,11 +3,11 @@
     isIconOnly?: boolean;
   } & svelteHTML.IntrinsicElements["button" & "a"];
 
-  let { href, children, isIconOnly, ...props }: Props = $props();
+  let { children, isIconOnly, ...props }: Props = $props();
 </script>
 
 <svelte:element
-  this={href ? "a" : "button"}
+  this={props.href ? "a" : "button"}
   class="button"
   class:iconOnly={isIconOnly}
   {...props}

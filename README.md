@@ -4,7 +4,7 @@
 - offline-first
 - privacy-first
 - open-source
-- self-hosted
+- open standards
 
 ## Prerequisites
 

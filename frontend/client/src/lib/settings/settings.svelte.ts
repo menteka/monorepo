@@ -1,11 +1,7 @@
 import { Store } from "@tauri-apps/plugin-store";
 import type { SupportedLanguage } from "@menteka/types";
-import { supportedLangs, defaultLang } from "@translations";
+import { supportedLangs } from "@translations";
 
-type Setting<T> = {
-  isSynced: boolean;
-  value: T;
-};
 export const themes = [
   "neobrutalism",
   "classic",
@@ -15,65 +11,126 @@ export const themes = [
   "vaporwave",
 ] as const;
 
-type Theme = (typeof themes)[0];
+type Theme = (typeof themes)[number];
+type Mode = "light" | "dark" | "auto";
 
-const defaultTheme = "neobrutalism";
-type Mode = "light" | "dark";
+type Setting<T> = {
+  isSynced: boolean;
+  value: T;
+};
 
-export async function initializeSettings() {
-  const tauriStore = await Store.load("settings.json");
+type Settings = {
+  theme: Setting<Theme>;
+  mode: Setting<Mode>;
+  language: Setting<SupportedLanguage>;
+};
 
-  const theme = await createStore<Theme>("theme", () => defaultTheme);
-  const mode = await createStore<Mode>("mode", () =>
-    window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"
-  );
-  const language = await createStore<SupportedLanguage>("language", () => {
-    if (navigator.language in supportedLangs) {
-      return navigator.language as SupportedLanguage;
-    }
-    const standardizedLang = navigator.language.toLowerCase().split("-")[0];
-    if (standardizedLang && standardizedLang in supportedLangs) {
-      return standardizedLang as SupportedLanguage;
-    }
-    return defaultLang;
+// Constants
+const DEFAULT_THEME: Theme = "neobrutalism";
+const STORE_FILE = "settings.json";
+const DEFAULT_MODE: Mode = "auto";
+const DEFAULT_LANG: SupportedLanguage = "en";
+
+// Create and export the settings store
+function createSettingsStore() {
+  // Internal state
+  const state = $state<Settings>({
+    theme: { value: DEFAULT_THEME, isSynced: false },
+    mode: {
+      value: DEFAULT_MODE,
+      isSynced: false,
+    },
+    language: { value: DEFAULT_LANG, isSynced: false },
   });
+
+  let tauriStore: Store | null = null;
+
+  async function initialize() {
+    try {
+      tauriStore = await Store.load(STORE_FILE);
+      const storedTheme = await tauriStore.get<Setting<Theme>>("theme");
+      if (storedTheme) state.theme = storedTheme;
+
+      const storedMode = await tauriStore.get<Setting<Mode>>("mode");
+      if (storedMode) state.mode = storedMode;
+
+      const storedLanguage =
+        await tauriStore.get<Setting<SupportedLanguage>>("language");
+      if (storedLanguage) {
+        state.language = storedLanguage;
+      } else {
+        let detectedLang: SupportedLanguage = DEFAULT_LANG;
+
+        if (navigator.language in supportedLangs) {
+          detectedLang = navigator.language as SupportedLanguage;
+        } else {
+          const standardizedLang = navigator.language
+            .toLowerCase()
+            .split("-")[0];
+          if (standardizedLang && standardizedLang in supportedLangs) {
+            detectedLang = standardizedLang as SupportedLanguage;
+          }
+        }
+
+        state.language = { value: detectedLang, isSynced: false };
+      }
+    } catch (error) {
+      console.error("Failed to initialize settings:", error);
+    }
+  }
+
+  initialize();
 
   return {
     get theme() {
-      return theme.val;
+      return state.theme;
     },
-    set theme(newTheme: Setting<Theme>) {
-      theme.val = newTheme;
+    async setTheme(newTheme: Theme) {
+      const setting: Setting<Theme> = { ...state.theme, value: newTheme };
+      if (tauriStore) {
+        console.log("Setting theme to", newTheme);
+        await tauriStore.set("theme", setting);
+      }
+      state.theme.value = newTheme;
     },
     get mode() {
-      return mode.val;
+      return state.mode;
     },
-    set mode(newMode: Setting<Mode>) {
-      mode.val = newMode;
+    async setMode(newMode: Mode) {
+      const setting: Setting<Mode> = { ...state.mode, value: newMode };
+      if (tauriStore) {
+        await tauriStore.set("mode", setting);
+      }
+      state.mode.value = newMode;
     },
     get language() {
-      return language.val;
+      return state.language;
     },
-    set language(newLanguage: Setting<SupportedLanguage>) {
-      language.val = newLanguage;
+    async setLanguage(newLanguage: SupportedLanguage) {
+      const setting: Setting<SupportedLanguage> = {
+        ...state.language,
+        value: newLanguage,
+      };
+      if (tauriStore) {
+        await tauriStore.set("language", setting);
+      }
+      state.language.value = newLanguage;
+    },
+    async toggleSynched(key: "theme" | "mode" | "language") {
+      const newSyncState = !state[key].isSynced;
+
+      if (tauriStore) {
+        await tauriStore.set(key, {
+          ...state[key],
+          isSynced: newSyncState,
+        });
+      }
+      state[key].isSynced = newSyncState;
+    },
+    get isInitialized() {
+      return tauriStore !== null;
     },
   };
-
-  async function createStore<T>(key: string, createFallbackFn: () => T) {
-    const cachedVal = await tauriStore.get<Setting<T>>("some-key");
-    let val: Setting<T> = cachedVal ?? {
-      value: createFallbackFn(),
-      isSynced: false,
-    };
-
-    return {
-      get val() {
-        return val;
-      },
-      set val(newVal: Setting<T>) {
-        tauriStore.set(key, newVal);
-        val = newVal;
-      },
-    };
-  }
 }
+
+export const settings = createSettingsStore();

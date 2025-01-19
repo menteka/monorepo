@@ -4,7 +4,6 @@
   import { t } from "@translations";
   import { onMount } from "svelte";
   import { Loader } from "@menteka/ui";
-  import { feedCache } from "@db";
 
   let { data } = $props();
 
