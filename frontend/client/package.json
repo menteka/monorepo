@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "tauri dev",
     "build": "tauri build",
-    "vite-dev": "vite dev --port 3000",
+    "translations": "vite-node src/scripts/copy-translations.ts --watch",
+    "vite-dev": "vite-node src/scripts/copy-translations.ts && vite dev --port 3000",
     "vite-build": "vite build",
     "preview": "vite preview",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
@@ -20,6 +21,8 @@
   "dependencies": {
     "@menteka/parser": "*",
     "@menteka/ui": "*",
+    "@tauri-apps/api": "^2.2.0",
+    "@tauri-apps/plugin-fs": "^2.2.0",
     "@tauri-apps/plugin-http": "^2.0.1",
     "@tauri-apps/plugin-notification": "^2.0.0",
     "@tauri-apps/plugin-sql": "^2.2.0",
@@ -48,7 +51,8 @@
     "typescript": "^5.6.3",
     "typescript-eslint": "^8.12.2",
     "vite": "^5.4.10",
-    "vitest": "^2.1.4"
+    "vitest": "^2.1.4",
+    "vite-node": "^3.0.4"
   },
   "type": "module"
 }

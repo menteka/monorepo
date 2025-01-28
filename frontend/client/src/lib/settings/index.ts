@@ -1,2 +1,2 @@
-export { settings, themes } from "./settings.svelte";
-export { default as Theme } from "./Theme.svelte";
+export { settings, themes } from "./store.svelte";
+export { default as Settings } from "./Settings.svelte";

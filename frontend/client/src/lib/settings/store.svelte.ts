@@ -45,43 +45,40 @@ function createSettingsStore() {
 
   let tauriStore: Store | null = null;
 
-  async function initialize() {
-    try {
-      tauriStore = await Store.load(STORE_FILE);
-      const storedTheme = await tauriStore.get<Setting<Theme>>("theme");
-      if (storedTheme) state.theme = storedTheme;
-
-      const storedMode = await tauriStore.get<Setting<Mode>>("mode");
-      if (storedMode) state.mode = storedMode;
-
-      const storedLanguage =
-        await tauriStore.get<Setting<SupportedLanguage>>("language");
-      if (storedLanguage) {
-        state.language = storedLanguage;
-      } else {
-        let detectedLang: SupportedLanguage = DEFAULT_LANG;
-
-        if (navigator.language in supportedLangs) {
-          detectedLang = navigator.language as SupportedLanguage;
-        } else {
-          const standardizedLang = navigator.language
-            .toLowerCase()
-            .split("-")[0];
-          if (standardizedLang && standardizedLang in supportedLangs) {
-            detectedLang = standardizedLang as SupportedLanguage;
-          }
-        }
-
-        state.language = { value: detectedLang, isSynced: false };
-      }
-    } catch (error) {
-      console.error("Failed to initialize settings:", error);
-    }
-  }
-
-  initialize();
-
   return {
+    async initialize() {
+      try {
+        tauriStore = await Store.load(STORE_FILE);
+        const storedTheme = await tauriStore.get<Setting<Theme>>("theme");
+        if (storedTheme) state.theme = storedTheme;
+
+        const storedMode = await tauriStore.get<Setting<Mode>>("mode");
+        if (storedMode) state.mode = storedMode;
+
+        const storedLanguage =
+          await tauriStore.get<Setting<SupportedLanguage>>("language");
+        if (storedLanguage) {
+          state.language = storedLanguage;
+        } else {
+          let detectedLang: SupportedLanguage = DEFAULT_LANG;
+
+          if (navigator.language in supportedLangs) {
+            detectedLang = navigator.language as SupportedLanguage;
+          } else {
+            const standardizedLang = navigator.language
+              .toLowerCase()
+              .split("-")[0];
+            if (standardizedLang && standardizedLang in supportedLangs) {
+              detectedLang = standardizedLang as SupportedLanguage;
+            }
+          }
+
+          state.language = { value: detectedLang, isSynced: false };
+        }
+      } catch (error) {
+        console.error("Failed to initialize settings:", error);
+      }
+    },
     get theme() {
       return state.theme;
     },

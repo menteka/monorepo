@@ -1,7 +1,7 @@
 <script lang="ts">
   import { Button } from "@menteka/ui";
   import { routes } from "./Routes";
-  import { globalT } from "@translations";
+  import { t } from "@translations";
   import Icon from "$lib/components/Icon.svelte";
 </script>
 
@@ -11,7 +11,7 @@
       <li class="nav">
         <Button href={route.href}>
           <Icon src={route.svg} />
-          {globalT(`routes.${route.name}`)}
+          {t(`routes.${route.name}`)}
         </Button>
       </li>
     {/each}

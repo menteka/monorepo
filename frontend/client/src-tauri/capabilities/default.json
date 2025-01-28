@@ -2,9 +2,7 @@
   "$schema": "../gen/schemas/desktop-schema.json",
   "identifier": "default",
   "description": "enables the default permissions",
-  "windows": [
-    "main"
-  ],
+  "windows": ["main"],
   "permissions": [
     {
       "identifier": "http:allow-fetch",
@@ -22,6 +20,9 @@
     "http:default",
     "notification:default",
     "sql:default",
-    "store:default"
+    "sql:allow-execute",
+    "store:default",
+    "fs:default",
+    "fs:allow-resource-read-recursive"
   ]
 }

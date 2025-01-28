@@ -1,10 +1,10 @@
 <script lang="ts">
-  import { settings } from "./settings.svelte";
+  import { onMount } from "svelte";
+  import { settings } from "./store.svelte";
 
   const href = $derived(`/themes/${settings.theme.value}.css`);
 
   $effect(() => {
-    console.log(href);
     if (settings?.theme.value) {
       const themesheet = document.head.querySelector(
         "theme-sheet"
@@ -13,6 +13,10 @@
         themesheet.href = href;
       }
     }
+  });
+
+  onMount(() => {
+    settings.initialize();
   });
 </script>
 

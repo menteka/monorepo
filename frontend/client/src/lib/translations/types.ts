@@ -1,0 +1,2 @@
+/** This file is auto-generated in `frontend/client/src/scripts/copy-translations.ts`. Do not modify it manually. **/
+export type Key = "skipToMainText" | "routes" | "routes.home" | "routes.saved" | "routes.settings" | "routes.feeds" | "routes.learn" | "title";

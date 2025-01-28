@@ -1,21 +1,16 @@
 <script lang="ts">
   import { routes } from "./Routes";
-  import { page } from "$app/stores";
-  import { createUrl } from "$lib/createUrl";
   import Icon from "../../Icon.svelte";
-  import { globalT } from "@translations";
+  import { t } from "@translations";
 </script>
 
 <nav>
   <ul>
     {#each routes as route}
       <li class="nav">
-        <a
-          href={createUrl(route.href)}
-          aria-label={globalT(`routes.${route.name}`)}
-        >
+        <a href={route.href} aria-label={`routes.${route.name}`}>
           <Icon src={route.svg} />
-          <span>{globalT(`routes.${route.name}`)}</span>
+          <span>{t(`routes.${route.name}`)}</span>
         </a>
       </li>
     {/each}
