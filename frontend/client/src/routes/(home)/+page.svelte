@@ -5,8 +5,6 @@
   import { onMount } from "svelte";
   import { Loader } from "@menteka/ui";
 
-  let { data } = $props();
-
   //TODO: paginate content, allow user to set amount on page.
 
   let isLoading = $state(true);
@@ -20,7 +18,7 @@
   });
 </script>
 
-<h1>{t("title")}</h1>
+<h1>{t("home.title")}</h1>
 
 {#if isLoading}
   <Loader />

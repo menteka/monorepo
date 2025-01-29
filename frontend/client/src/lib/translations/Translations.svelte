@@ -6,6 +6,7 @@
   $effect(() => {
     if (translations.isReady) {
       translations.loadTranslations(settings.language.value);
+      document.documentElement.setAttribute("lang", settings.language.value);
     }
   });
 

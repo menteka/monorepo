@@ -22,10 +22,9 @@
     console.log("changing");
     settings.setMode(e.target.value);
   };
-  //get feed ID from req params
 </script>
 
-<h1>{t("title")}</h1>
+<h1>{t("settings.title")}</h1>
 
 <select value={theme.value} onchange={updateTheme}>
   {#each themes as theme}

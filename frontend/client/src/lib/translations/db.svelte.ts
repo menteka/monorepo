@@ -20,6 +20,7 @@ function createTranslationsStore() {
       const tauriStore = await Store.load(STORE_FILE);
       const storedVersion = await tauriStore.get<string>(STORE_KEY);
       const appVersion = await getVersion();
+      console.log(import.meta.env.MODE);
       //Only load translations the first time the app loads after an update or in development mode
       //All other times, it will reuse the existing database.
       if (
@@ -32,7 +33,9 @@ function createTranslationsStore() {
               `resources/translations/${lang}.json`
             );
             const data = await readFile(resourcePath);
-            const json = JSON.parse(new TextDecoder().decode(data));
+            const json = flattenObject(
+              JSON.parse(new TextDecoder().decode(data))
+            );
 
             const db = await Database.load(`sqlite:translations${lang}.db`);
             await db.execute(`DROP TABLE IF EXISTS translations;
@@ -91,4 +94,24 @@ export const translations = createTranslationsStore();
 
 export function t(key: Key) {
   return translations.get(key);
+}
+
+function flattenObject(
+  obj: Record<string, string | Record<string, string>>,
+  parentKey = ""
+) {
+  return Object.keys(obj).reduce(
+    (acc, key) => {
+      const newKey = parentKey ? `${parentKey}.${key}` : key;
+
+      if (typeof obj[key] === "object" && obj[key] !== null) {
+        Object.assign(acc, flattenObject(obj[key], newKey));
+      } else {
+        acc[newKey] = obj[key]!;
+      }
+
+      return acc;
+    },
+    {} as Record<string, string>
+  );
 }

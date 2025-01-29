@@ -7,7 +7,7 @@ const DIST_DIR = "./src-tauri/resources/translations";
 async function mergeTranslations(lang: string) {
   const merged = {};
   const files = Object.keys(import.meta.glob("/src/**/content/*.json")).filter(
-    (file) => file.includes(lang)
+    (file) => file.endsWith(`${lang}.json`)
   );
   for (const file of files) {
     const content = await fs.readFile(`.${file}`, "utf-8");
@@ -30,9 +30,10 @@ async function processTranslations() {
     const merged = await mergeTranslations(lang);
     const allKeys = Object.entries(merged).reduce(
       (acc: string[], [key, value]) => {
-        acc.push(key);
         if (typeof value === "object" && value !== null) {
           Object.keys(value).forEach((subKey) => acc.push(`${key}.${subKey}`));
+        } else {
+          acc.push(key);
         }
         return acc;
       },

@@ -1,11 +1,12 @@
 {
-  "skipToMainText": "Ga naar de hoofdinhoud",
-  "routes": {
-    "home": "start",
-    "saved": "bewaard",
-    "settings": "instellingen",
-    "feeds": "feeds",
-    "learn": "leren"
+  "skipToMainText": "Skip to main content",
+  "home": {
+    "title": "Home"
   },
-  "title": "hallo"
+  "debug": {
+    "title": "hello debug"
+  },
+  "settings": {
+    "title": "settings"
+  }
 }

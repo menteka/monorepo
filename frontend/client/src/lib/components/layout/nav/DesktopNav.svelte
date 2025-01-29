@@ -11,7 +11,7 @@
       <li class="nav">
         <Button href={route.href}>
           <Icon src={route.svg} />
-          {t(`routes.${route.name}`)}
+          {t(`${route.name}.title`)}
         </Button>
       </li>
     {/each}
