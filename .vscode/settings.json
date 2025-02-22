@@ -2,5 +2,12 @@
   "workbench.editor.labelFormat": "short",
   "search.exclude": {
     "backend/d1-manager": true
-  }
+  },
+  // allow autocomplete for ArkType expressions like "string | num"
+  "editor.quickSuggestions": {
+    "strings": "on"
+  },
+  "editor.wordWrap": "on",
+  // prioritize ArkType's "type" for autoimports
+  "typescript.preferences.autoImportSpecifierExcludeRegexes": ["^(node:)?os$"]
 }

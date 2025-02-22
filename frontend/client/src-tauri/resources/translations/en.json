@@ -3,10 +3,29 @@
   "home": {
     "title": "Home"
   },
+  "error": {
+    "title": "Something went wrong",
+    "description": "We're sorry, but something went wrong. Please try again later or go back to the homepage."
+  },
   "debug": {
     "title": "hello debug"
   },
+  "feeds": {
+    "title": "Feeds"
+  },
   "settings": {
-    "title": "settings"
+    "title": "Settings",
+    "themes": {
+      "title": "Themes"
+    },
+    "language": {
+      "title": "Language"
+    },
+    "mode": {
+      "title": "Mode",
+      "light": "Light",
+      "dark": "Dark",
+      "auto": "Auto"
+    }
   }
 }

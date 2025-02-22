@@ -86,6 +86,15 @@ export class FeedParser {
     }
   }
 
+  private getCopyright(feed: Element) {
+    switch (this.format) {
+      case "Atom":
+        return getTextContent(feed, "rights");
+      case "RSS":
+        return getTextContent(feed, "copyright");
+    }
+  }
+
   private getLastUpdated(feed: Element) {
     switch (this.format) {
       case "Atom": {
@@ -104,12 +113,7 @@ export class FeedParser {
   }
 
   private getLink(feed: Element) {
-    switch (this.format) {
-      case "Atom":
-        return getTextContent(feed, "link");
-      case "RSS":
-        return getAtomLink(feed);
-    }
+    return getTextContent(feed, "link");
   }
 
   /* -- Methods concerning item data -- */

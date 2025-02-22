@@ -3,10 +3,29 @@
   "home": {
     "title": "Start"
   },
+  "error": {
+    "title": "Er ging iets mis!",
+    "description": "Het spijt ons, maar er ging iets mis. Probeer het later opnieuw of ga terug naar de vorige pagina."
+  },
   "debug": {
     "title": "hallo debug"
   },
+  "feeds": {
+    "title": "Feeds"
+  },
   "settings": {
-    "title": "instellingen"
+    "title": "Instellingen",
+    "themes": {
+      "title": "Thema's"
+    },
+    "language": {
+      "title": "Taal"
+    },
+    "mode": {
+      "title": "Modus",
+      "light": "Licht",
+      "dark": "Donker",
+      "auto": "Automatisch"
+    }
   }
 }

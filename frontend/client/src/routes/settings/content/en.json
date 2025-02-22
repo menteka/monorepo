@@ -1,5 +1,17 @@
 {
   "settings": {
-    "title": "settings"
+    "title": "Settings",
+    "themes": {
+      "title": "Themes"
+    },
+    "language": {
+      "title": "Language"
+    },
+    "mode": {
+      "title": "Mode",
+      "light": "Light",
+      "dark": "Dark",
+      "auto": "Auto"
+    }
   }
 }

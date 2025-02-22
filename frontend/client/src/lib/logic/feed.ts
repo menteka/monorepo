@@ -3,10 +3,10 @@ import { fetch } from "@tauri-apps/plugin-http";
 
 const urls = [
   "https://rss.art19.com/de-grote-podcastlas",
-  // "https://www.nrc.nl/rss/",
-  // "https://scientias.nl/feed",
-  // "https://www.youtube.com/feeds/videos.xml?channel_id=UC4eYXhJI4-7wSWc8UNRwD4A",
-  // "https://backend.deviantart.com/rss.xml?type=deviation&q=by%3Aloish+sort%3Atime+meta%3Aall",
+  "https://www.nrc.nl/rss/",
+  "https://scientias.nl/feed",
+  "https://www.youtube.com/feeds/videos.xml?channel_id=UC4eYXhJI4-7wSWc8UNRwD4A",
+  "https://backend.deviantart.com/rss.xml?type=deviation&q=by%3Aloish+sort%3Atime+meta%3Aall",
 ];
 
 const headers = {
@@ -23,7 +23,12 @@ async function processFromUrl(url: string) {
       headers,
     });
   } catch (e) {
-    result = await fetch(url);
+    try {
+      result = await fetch(url);
+    } catch (e) {
+      console.error(e);
+      return;
+    }
   }
   const content = await result.text();
   return parser.parse(content);
@@ -32,4 +37,22 @@ async function processFromUrl(url: string) {
 export async function fetchFeed() {
   const result = await Promise.all(urls.map(processFromUrl));
   return result;
+}
+
+export async function fetchFeedMetadata(url: string) {
+  let result;
+  try {
+    result = await fetch(url, {
+      headers,
+    });
+  } catch (e) {
+    try {
+      result = await fetch(url);
+    } catch (e) {
+      console.error(e);
+      return;
+    }
+  }
+  const content = await result.text();
+  return parser.parse(content);
 }

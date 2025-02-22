@@ -1,2 +1,2 @@
 /** This file is auto-generated in `frontend/client/src/scripts/copy-translations.ts`. Do not modify it manually. **/
-export type Key = "skipToMainText" | "home.title" | "debug.title" | "settings.title";
+export type Key = "skipToMainText" | "home.title" | "error.title" | "error.description" | "debug.title" | "feeds.title" | "settings.title" | "settings.themes" | "settings.language" | "settings.mode";

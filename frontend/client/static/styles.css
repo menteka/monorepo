@@ -38,6 +38,8 @@ ul {
   /* Utilities */
   --round: 9999px;
   --touch-size: 48px;
+  --golden-ratio: 1.618;
+  --golden-ratio-inverse: 0.618;
 }
 
 /* Small screens (mobile) */

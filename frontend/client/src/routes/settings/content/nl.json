@@ -1,5 +1,17 @@
 {
   "settings": {
-    "title": "instellingen"
+    "title": "Instellingen",
+    "themes": {
+      "title": "Thema's"
+    },
+    "language": {
+      "title": "Taal"
+    },
+    "mode": {
+      "title": "Modus",
+      "light": "Licht",
+      "dark": "Donker",
+      "auto": "Automatisch"
+    }
   }
 }

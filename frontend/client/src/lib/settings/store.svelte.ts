@@ -9,6 +9,7 @@ export const themes = [
   "monochrome",
   "neumorphism",
   "vaporwave",
+  "bedtime",
 ] as const;
 
 type Theme = (typeof themes)[number];
@@ -85,7 +86,6 @@ function createSettingsStore() {
     async setTheme(newTheme: Theme) {
       const setting: Setting<Theme> = { ...state.theme, value: newTheme };
       if (tauriStore) {
-        console.log("Setting theme to", newTheme);
         await tauriStore.set("theme", setting);
       }
       state.theme.value = newTheme;

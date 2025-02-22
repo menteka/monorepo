@@ -23,6 +23,7 @@
     position: sticky;
     top: 3rem;
     align-self: flex-start;
+    padding-right: 4rem;
   }
 
   ul {

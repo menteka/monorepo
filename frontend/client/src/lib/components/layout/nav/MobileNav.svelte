@@ -10,7 +10,7 @@
       <li class="nav">
         <a href={route.href} aria-label={`routes.${route.name}`}>
           <Icon src={route.svg} />
-          <span>{t(`routes.${route.name}`)}</span>
+          <span>{t(`${route.name}.title`)}</span>
         </a>
       </li>
     {/each}
